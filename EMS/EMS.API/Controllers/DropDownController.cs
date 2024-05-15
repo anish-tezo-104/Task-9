@@ -14,17 +14,13 @@ namespace EMS.API.Controllers;
 [ApiController]
 public class DropDownController : IDropDownController
 {
-    private readonly EMSContext _context;
     private readonly IDropdownBAL _dropdownBal;
-    private readonly IDropdownDAL _dropdownDal;
     private readonly Serilog.ILogger _logger;
 
-    public DropDownController(EMSContext context, Serilog.ILogger logger)
+    public DropDownController(Serilog.ILogger logger, IDropdownBAL dropdownBAL)
     {
-        _context = context;
         _logger = logger;
-        _dropdownDal = new DropdownDAL(_context);
-        _dropdownBal = new DropdownBAL(_dropdownDal,_logger);
+        _dropdownBal = dropdownBAL;
     }
 
     [HttpGet("Departments")]

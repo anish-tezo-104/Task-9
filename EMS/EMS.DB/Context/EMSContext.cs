@@ -12,7 +12,7 @@ public class EMSContext : DbContext
     {
     }
 
-    public EMSContext(DbContextOptions dbContextOptions, IConfiguration configuration) : base(dbContextOptions)
+    public EMSContext(DbContextOptions dbContextOptions, IConfiguration configuration)
     {
         _configuration = configuration;
     }
@@ -33,14 +33,13 @@ public class EMSContext : DbContext
             // Construct the path to the appsettings.json file
             string appSettingsPath = Path.Combine(baseDirectory, "appsettings.json");
             Console.WriteLine(appSettingsPath);
+            Console.WriteLine(_configuration["ConnectionStrings:DefaultConnection"]);
 
             // Load configuration from appsettings.json
-            //var configuration = new ConfigurationBuilder()
-            //    .AddJsonFile("C:/Users/anish.m/OneDrive - TECHNOVERT SOLUTIONS PRIVATE LIMITED/Desktop/office Tezo/Task-9/EMS.API/bin/Debug/net8.0/appsettings.json", optional: true, reloadOnChange: true)
-            //       .Build();
+           
 
-           // // Use SQL Server with the connection string from appsettings.json
-            //optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+            // // Use SQL Server with the connection string from appsettings.json
+            optionsBuilder.UseSqlServer(_configuration["ConnectionStrings:DefaultConnection"]);
         }
     }
 

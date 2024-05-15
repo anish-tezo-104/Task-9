@@ -17,17 +17,13 @@ namespace EMS.API.Controllers;
 [ApiController]
 public class EmployeeController : ControllerBase, IEmployeeController
 {
-    private readonly EMSContext _context;
     private readonly IEmployeeBAL _employeeBal;
-    private readonly IEmployeeDAL _employeeDal;
     private readonly Serilog.ILogger _logger;
 
-    public EmployeeController(EMSContext context, Serilog.ILogger logger)
+    public EmployeeController(Serilog.ILogger logger, IEmployeeBAL employeeBAL)
     {
-        _context = context;
         _logger = logger;
-        _employeeDal = new EmployeeDAL(_context);
-        _employeeBal = new EmployeeBAL(_logger, _employeeDal);
+        _employeeBal = employeeBAL;
     }
 
     [HttpPost]
@@ -84,7 +80,7 @@ public class EmployeeController : ControllerBase, IEmployeeController
     }
 
     [HttpGet]
-    [Authorize]
+    //[Authorize]
     public async Task<IActionResult> GetEmployees([FromQuery] EmployeeFilters? filters)
     {
         try

@@ -17,17 +17,13 @@ namespace EMS.API.Controllers;
 [ApiController]
 public class RoleController : IRoleController
 {
-    private readonly EMSContext _context;
     private readonly IRoleBAL _roleBal;
-    private readonly IRoleDAL _roleDal;
     private readonly Serilog.ILogger _logger;
 
-    public RoleController(EMSContext context, Serilog.ILogger logger)
+    public RoleController(EMSContext context, Serilog.ILogger logger, IRoleBAL roleBAL)
     {
-        _context = context;
         _logger = logger;
-        _roleDal = new RoleDAL(_context);
-        _roleBal = new RoleBAL(_roleDal, _logger);
+        _roleBal = roleBAL;
     }
 
     [HttpPost]

@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,19 +30,19 @@ builder.Services.AddLogging(loggingBuilder =>
 });
 
 // Register services
-builder.Services.AddScoped<IDropDownController, DropDownController>();
+//builder.Services.AddScoped<DropDownController>();
 builder.Services.AddScoped<IDropdownBAL, DropdownBAL>();
 builder.Services.AddScoped<IDropdownDAL, DropdownDAL>();
 
-builder.Services.AddScoped<IEmployeeController, EmployeeController>();
+//builder.Services.AddScoped<IEmployeeController, EmployeeController>();
 builder.Services.AddScoped<IEmployeeBAL, EmployeeBAL>();
 builder.Services.AddScoped<IEmployeeDAL, EmployeeDAL>();
 
-builder.Services.AddScoped<IRoleController, RoleController>();
+//builder.Services.AddScoped<IRoleController, RoleController>();
 builder.Services.AddScoped<IRoleBAL, RoleBAL>();
 builder.Services.AddScoped<IRoleDAL, RoleDAL>();
 
-builder.Services.AddScoped<IAuthController, AuthController>();
+//builder.Services.AddScoped<IAuthController, AuthController>();
 builder.Services.AddScoped<IAuthBAL, AuthBAL>();
 builder.Services.AddScoped<IAuthDAL, AuthDAL>();
 
@@ -89,10 +90,12 @@ builder.Services.AddSwaggerGen(swagger =>
                 });
 });
 
- builder.Services.AddDbContext<EMSContext>(options =>
- {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-  });
+builder.Services.AddDbContext<EMSContext>(options =>
+{
+    //options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseSqlServer(b => b.MigrationsAssembly("EMS.API"));  
+
+});
 
 //builder.Services.AddDbContext<EMSContext>();
 

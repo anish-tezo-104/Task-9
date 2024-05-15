@@ -24,21 +24,15 @@ namespace EMS.API.Controllers;
 [ApiController]
 public class AuthController : ControllerBase, IAuthController
 {
-    private readonly EMSContext _context;
     private readonly IAuthBAL _authBal;
-    private readonly IAuthDAL _authDal;
     private readonly Serilog.ILogger _logger;
-    private readonly AppSettings _appSettings;
     private IConfiguration _configuration;
 
-    public AuthController(IOptions<AppSettings> appSettings, EMSContext context, Serilog.ILogger logger, IConfiguration configuration)
+    public AuthController( Serilog.ILogger logger, IConfiguration configuration, IAuthBAL authBal)
     {
         _configuration = configuration;
-        _appSettings = appSettings.Value;
-        _context = context;
         _logger = logger;
-        _authDal = new AuthDAL(_context);
-        _authBal = new AuthBAL(_logger, _authDal);
+        _authBal = authBal;
     }
 
     [AllowAnonymous]

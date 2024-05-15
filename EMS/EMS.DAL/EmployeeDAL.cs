@@ -143,9 +143,9 @@ public class EmployeeDAL : IEmployeeDAL
         }
 
         // Apply pagination
-            employees = employees
-                .Skip((filters.PageNumber - 1) * filters.PageSize)
-                .Take(filters.PageSize);
+        employees = employees
+            .Skip((filters.PageNumber - 1) * filters.PageSize)
+            .Take(filters.PageSize);
 
         var result = await employees.ToListAsync();
         return _mapper.ToEmployeeDto(result);
