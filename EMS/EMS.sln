@@ -1,9 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.002.0
+VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS", "EMS.csproj", "{84F75789-D10B-4231-B90A-23105B580355}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.API", "..\..\office Tezo\Task-9\EMS.API\EMS.API.csproj", "{1E103F48-FE59-4574-89FC-FC056E55BF11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.BAL", "..\..\office Tezo\Task-9\EMS.BAL\EMS.BAL.csproj", "{38F7883C-00CA-42EA-8718-70BA0E08DDD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.DAL", "..\..\office Tezo\Task-9\EMS.DAL\EMS.DAL.csproj", "{F77A54FE-E14F-4087-905A-3F702B312F74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.Common", "..\..\office Tezo\Task-9\EMS.Common\EMS.Common.csproj", "{DBD869C3-FC6C-42DB-A508-13D491C1AB52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMS.DB", "..\..\office Tezo\Task-9\EMS.DB\EMS.DB.csproj", "{01769934-DE81-489D-94A8-CD01C3B42FAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +19,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{84F75789-D10B-4231-B90A-23105B580355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84F75789-D10B-4231-B90A-23105B580355}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{84F75789-D10B-4231-B90A-23105B580355}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{84F75789-D10B-4231-B90A-23105B580355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E103F48-FE59-4574-89FC-FC056E55BF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E103F48-FE59-4574-89FC-FC056E55BF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E103F48-FE59-4574-89FC-FC056E55BF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E103F48-FE59-4574-89FC-FC056E55BF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38F7883C-00CA-42EA-8718-70BA0E08DDD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38F7883C-00CA-42EA-8718-70BA0E08DDD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38F7883C-00CA-42EA-8718-70BA0E08DDD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38F7883C-00CA-42EA-8718-70BA0E08DDD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77A54FE-E14F-4087-905A-3F702B312F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77A54FE-E14F-4087-905A-3F702B312F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77A54FE-E14F-4087-905A-3F702B312F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77A54FE-E14F-4087-905A-3F702B312F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBD869C3-FC6C-42DB-A508-13D491C1AB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBD869C3-FC6C-42DB-A508-13D491C1AB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBD869C3-FC6C-42DB-A508-13D491C1AB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBD869C3-FC6C-42DB-A508-13D491C1AB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01769934-DE81-489D-94A8-CD01C3B42FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01769934-DE81-489D-94A8-CD01C3B42FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01769934-DE81-489D-94A8-CD01C3B42FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01769934-DE81-489D-94A8-CD01C3B42FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {728251DF-69EB-4625-830B-EBF9238F850D}
+		SolutionGuid = {E036BB59-792B-4D96-A545-A57CDBB9F53F}
 	EndGlobalSection
 EndGlobal
