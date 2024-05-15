@@ -1,5 +1,4 @@
 using EMS.API.Helpers;
-using EMS.API.Interfaces;
 using EMS.BAL;
 using EMS.BAL.Interfaces;
 using EMS.DAL;
@@ -15,7 +14,7 @@ namespace EMS.API.Controllers;
 
 [Route("/Api/Role")]
 [ApiController]
-public class RoleController : IRoleController
+public class RoleController : ControllerBase
 {
     private readonly IRoleBAL _roleBal;
     private readonly Serilog.ILogger _logger;

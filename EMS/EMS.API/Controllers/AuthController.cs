@@ -2,7 +2,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using EMS.API.Helpers;
-using EMS.API.Interfaces;
 using EMS.BAL;
 using EMS.BAL.Interfaces;
 using EMS.BAL.Models;
@@ -22,7 +21,7 @@ namespace EMS.API.Controllers;
 
 [Route("/Auth")]
 [ApiController]
-public class AuthController : ControllerBase, IAuthController
+public class AuthController : ControllerBase
 {
     private readonly IAuthBAL _authBal;
     private readonly Serilog.ILogger _logger;

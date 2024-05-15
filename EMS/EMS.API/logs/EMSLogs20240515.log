@@ -3193,3 +3193,172 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 2024-05-15 17:37:58.279 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
 2024-05-15 17:37:58.282 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
 2024-05-15 17:37:58.288 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 17:51:08.523 +05:30 [DBG] Initializing Razor view compiler with no compiled views.
+2024-05-15 17:51:08.590 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-05-15 17:51:08.669 +05:30 [INF] User profile is available. Using 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-15 17:51:08.738 +05:30 [DBG] Hosting starting
+2024-05-15 17:51:08.745 +05:30 [DBG] Reading data from file 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys\key-a1d877de-6025-4a19-8dac-4a7655117c08.xml'.
+2024-05-15 17:51:08.754 +05:30 [DBG] Found key {a1d877de-6025-4a19-8dac-4a7655117c08}.
+2024-05-15 17:51:08.762 +05:30 [DBG] Considering key {a1d877de-6025-4a19-8dac-4a7655117c08} with expiration date 2024-08-05 11:08:49Z as default key.
+2024-05-15 17:51:08.766 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 17:51:08.767 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-05-15 17:51:08.769 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 17:51:08.772 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-05-15 17:51:08.774 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-05-15 17:51:08.777 +05:30 [DBG] Using key {a1d877de-6025-4a19-8dac-4a7655117c08} as the default key.
+2024-05-15 17:51:08.779 +05:30 [DBG] Key ring with default key {a1d877de-6025-4a19-8dac-4a7655117c08} was loaded during application startup.
+2024-05-15 17:51:08.994 +05:30 [INF] Now listening on: https://localhost:7106
+2024-05-15 17:51:08.996 +05:30 [INF] Now listening on: http://localhost:5089
+2024-05-15 17:51:08.997 +05:30 [DBG] Loaded hosting startup assembly EMS.API
+2024-05-15 17:51:08.998 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-05-15 17:51:08.999 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-15 17:51:08.999 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-15 17:51:09.055 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-15 17:51:09.057 +05:30 [INF] Hosting environment: Development
+2024-05-15 17:51:09.058 +05:30 [INF] Content root path: C:\Users\anish.m\OneDrive - TECHNOVERT SOLUTIONS PRIVATE LIMITED\Desktop\office Tezo\Task 9\EMS\EMS.API
+2024-05-15 17:51:09.059 +05:30 [DBG] Hosting started
+2024-05-15 17:51:09.122 +05:30 [DBG] Connection id "0HN3KR606SUCF" received FIN.
+2024-05-15 17:51:09.130 +05:30 [DBG] Connection id "0HN3KR606SUCF" accepted.
+2024-05-15 17:51:09.132 +05:30 [DBG] Connection id "0HN3KR606SUCF" started.
+2024-05-15 17:51:09.155 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-05-15 17:51:09.204 +05:30 [DBG] Connection id "0HN3KR606SUCF" stopped.
+2024-05-15 17:51:09.208 +05:30 [DBG] Connection id "0HN3KR606SUCF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 17:51:09.382 +05:30 [DBG] Connection id "0HN3KR606SUCG" accepted.
+2024-05-15 17:51:09.385 +05:30 [DBG] Connection id "0HN3KR606SUCG" started.
+2024-05-15 17:51:09.483 +05:30 [DBG] Connection 0HN3KR606SUCG established using the following protocol: "Tls12"
+2024-05-15 17:51:09.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2024-05-15 17:51:09.743 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-15 17:51:09.768 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-05-15 17:51:09.769 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 17:51:09.874 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 17:51:09.956 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-05-15 17:51:09.958 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-05-15 17:51:10.005 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-05-15 17:51:10.010 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-05-15 17:51:10.020 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 446.6655ms
+2024-05-15 17:51:10.049 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - null null
+2024-05-15 17:51:10.049 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-15 17:51:10.070 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 21.306ms
+2024-05-15 17:51:10.149 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - 200 null text/javascript; charset=UTF-8 100.1008ms
+2024-05-15 17:51:10.477 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2024-05-15 17:51:10.482 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-05-15 17:51:10.483 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 17:51:10.485 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 17:51:10.846 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 372.036ms
+2024-05-15 17:51:40.104 +05:30 [DBG] Initializing Razor view compiler with no compiled views.
+2024-05-15 17:51:40.203 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-05-15 17:51:40.288 +05:30 [INF] User profile is available. Using 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-15 17:51:40.408 +05:30 [DBG] Hosting starting
+2024-05-15 17:51:40.417 +05:30 [DBG] Reading data from file 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys\key-a1d877de-6025-4a19-8dac-4a7655117c08.xml'.
+2024-05-15 17:51:40.427 +05:30 [DBG] Found key {a1d877de-6025-4a19-8dac-4a7655117c08}.
+2024-05-15 17:51:40.438 +05:30 [DBG] Considering key {a1d877de-6025-4a19-8dac-4a7655117c08} with expiration date 2024-08-05 11:08:49Z as default key.
+2024-05-15 17:51:40.442 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 17:51:40.443 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-05-15 17:51:40.445 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 17:51:40.450 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-05-15 17:51:40.451 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-05-15 17:51:40.453 +05:30 [DBG] Using key {a1d877de-6025-4a19-8dac-4a7655117c08} as the default key.
+2024-05-15 17:51:40.456 +05:30 [DBG] Key ring with default key {a1d877de-6025-4a19-8dac-4a7655117c08} was loaded during application startup.
+2024-05-15 17:51:40.877 +05:30 [INF] Now listening on: https://localhost:7106
+2024-05-15 17:51:40.879 +05:30 [INF] Now listening on: http://localhost:5089
+2024-05-15 17:51:40.880 +05:30 [DBG] Loaded hosting startup assembly EMS.API
+2024-05-15 17:51:40.881 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-05-15 17:51:40.882 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-15 17:51:40.884 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-15 17:51:40.946 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-15 17:51:40.947 +05:30 [INF] Hosting environment: Development
+2024-05-15 17:51:40.948 +05:30 [INF] Content root path: C:\Users\anish.m\OneDrive - TECHNOVERT SOLUTIONS PRIVATE LIMITED\Desktop\office Tezo\Task 9\EMS\EMS.API
+2024-05-15 17:51:40.950 +05:30 [DBG] Hosting started
+2024-05-15 17:51:40.990 +05:30 [DBG] Connection id "0HN3KR69MQDFM" received FIN.
+2024-05-15 17:51:40.991 +05:30 [DBG] Connection id "0HN3KR69MQDFM" accepted.
+2024-05-15 17:51:40.992 +05:30 [DBG] Connection id "0HN3KR69MQDFM" started.
+2024-05-15 17:51:41.010 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-05-15 17:51:41.047 +05:30 [DBG] Connection id "0HN3KR69MQDFM" stopped.
+2024-05-15 17:51:41.050 +05:30 [DBG] Connection id "0HN3KR69MQDFM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 17:51:41.322 +05:30 [DBG] Connection id "0HN3KR69MQDFN" accepted.
+2024-05-15 17:51:41.344 +05:30 [DBG] Connection id "0HN3KR69MQDFN" started.
+2024-05-15 17:51:41.466 +05:30 [DBG] Connection 0HN3KR69MQDFN established using the following protocol: "Tls12"
+2024-05-15 17:51:41.574 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2024-05-15 17:51:41.740 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-15 17:51:41.759 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-05-15 17:51:41.760 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 17:51:41.850 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 17:51:41.939 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-05-15 17:51:41.942 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-05-15 17:51:41.979 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-05-15 17:51:41.982 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-05-15 17:51:41.987 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 424.8224ms
+2024-05-15 17:51:42.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-15 17:51:42.012 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - null null
+2024-05-15 17:51:42.029 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 17.2064ms
+2024-05-15 17:51:42.106 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - 200 null text/javascript; charset=UTF-8 93.948ms
+2024-05-15 17:51:42.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2024-05-15 17:51:42.200 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-05-15 17:51:42.202 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 17:51:42.204 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 17:51:42.391 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 195.538ms
+2024-05-15 17:51:52.450 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/Api/Employees - null null
+2024-05-15 17:51:52.458 +05:30 [DBG] 1 candidate(s) found for the request path '/Api/Employees'
+2024-05-15 17:51:52.467 +05:30 [DBG] Endpoint 'EMS.API.Controllers.EmployeeController.GetEmployees (EMS.API)' with route pattern 'Api/Employees' is valid for the request path '/Api/Employees'
+2024-05-15 17:51:52.470 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.EmployeeController.GetEmployees (EMS.API)'
+2024-05-15 17:51:52.472 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 17:51:52.474 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 17:51:52.477 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.EmployeeController.GetEmployees (EMS.API)'
+2024-05-15 17:51:52.522 +05:30 [INF] Route matched with {action = "GetEmployees", controller = "Employee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployees(EMS.DAL.DTO.EmployeeFilters) on controller EMS.API.Controllers.EmployeeController (EMS.API).
+2024-05-15 17:51:52.526 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 17:51:52.527 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 17:51:52.530 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 17:51:52.532 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 17:51:52.533 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 17:51:52.540 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.EmployeeController (EMS.API)
+2024-05-15 17:51:52.739 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.EmployeeController (EMS.API)
+2024-05-15 17:51:52.766 +05:30 [DBG] Attempting to bind parameter 'filters' of type 'EMS.DAL.DTO.EmployeeFilters' ...
+2024-05-15 17:51:52.771 +05:30 [DBG] Attempting to bind parameter 'filters' of type 'EMS.DAL.DTO.EmployeeFilters' using the name '' in request data ...
+2024-05-15 17:51:52.783 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Alphabet' of type 'System.Collections.Generic.List`1[System.Char]' using the name 'Alphabet' in request data ...
+2024-05-15 17:51:52.786 +05:30 [DBG] Could not find a value in the request with name 'Alphabet' for binding property 'EMS.DAL.DTO.EmployeeFilters.Alphabet' of type 'System.Collections.Generic.List`1[System.Char]'.
+2024-05-15 17:51:52.788 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Alphabet' of type 'System.Collections.Generic.List`1[System.Char]'.
+2024-05-15 17:51:52.794 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Locations' of type 'System.Collections.Generic.List`1[System.Int32]' using the name 'Locations' in request data ...
+2024-05-15 17:51:52.797 +05:30 [DBG] Could not find a value in the request with name 'Locations' for binding property 'EMS.DAL.DTO.EmployeeFilters.Locations' of type 'System.Collections.Generic.List`1[System.Int32]'.
+2024-05-15 17:51:52.799 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Locations' of type 'System.Collections.Generic.List`1[System.Int32]'.
+2024-05-15 17:51:52.801 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Departments' of type 'System.Collections.Generic.List`1[System.Int32]' using the name 'Departments' in request data ...
+2024-05-15 17:51:52.802 +05:30 [DBG] Could not find a value in the request with name 'Departments' for binding property 'EMS.DAL.DTO.EmployeeFilters.Departments' of type 'System.Collections.Generic.List`1[System.Int32]'.
+2024-05-15 17:51:52.804 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Departments' of type 'System.Collections.Generic.List`1[System.Int32]'.
+2024-05-15 17:51:52.806 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Status' of type 'System.Collections.Generic.List`1[System.Int32]' using the name 'Status' in request data ...
+2024-05-15 17:51:52.808 +05:30 [DBG] Could not find a value in the request with name 'Status' for binding property 'EMS.DAL.DTO.EmployeeFilters.Status' of type 'System.Collections.Generic.List`1[System.Int32]'.
+2024-05-15 17:51:52.810 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Status' of type 'System.Collections.Generic.List`1[System.Int32]'.
+2024-05-15 17:51:52.812 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Search' of type 'System.String' using the name 'Search' in request data ...
+2024-05-15 17:51:52.815 +05:30 [DBG] Could not find a value in the request with name 'Search' for binding property 'EMS.DAL.DTO.EmployeeFilters.Search' of type 'System.String'.
+2024-05-15 17:51:52.817 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.Search' of type 'System.String'.
+2024-05-15 17:51:52.819 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.PageNumber' of type 'System.Int32' using the name 'PageNumber' in request data ...
+2024-05-15 17:51:52.820 +05:30 [DBG] Could not find a value in the request with name 'PageNumber' for binding property 'EMS.DAL.DTO.EmployeeFilters.PageNumber' of type 'System.Int32'.
+2024-05-15 17:51:52.821 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.PageNumber' of type 'System.Int32'.
+2024-05-15 17:51:52.823 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.PageSize' of type 'System.Int32' using the name 'PageSize' in request data ...
+2024-05-15 17:51:52.824 +05:30 [DBG] Could not find a value in the request with name 'PageSize' for binding property 'EMS.DAL.DTO.EmployeeFilters.PageSize' of type 'System.Int32'.
+2024-05-15 17:51:52.826 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.PageSize' of type 'System.Int32'.
+2024-05-15 17:51:52.828 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.RoleId' of type 'System.Nullable`1[System.Int32]' using the name 'RoleId' in request data ...
+2024-05-15 17:51:52.838 +05:30 [DBG] Could not find a value in the request with name 'RoleId' for binding property 'EMS.DAL.DTO.EmployeeFilters.RoleId' of type 'System.Nullable`1[System.Int32]'.
+2024-05-15 17:51:52.840 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.RoleId' of type 'System.Nullable`1[System.Int32]'.
+2024-05-15 17:51:52.842 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.DepartmentId' of type 'System.Nullable`1[System.Int32]' using the name 'DepartmentId' in request data ...
+2024-05-15 17:51:52.845 +05:30 [DBG] Could not find a value in the request with name 'DepartmentId' for binding property 'EMS.DAL.DTO.EmployeeFilters.DepartmentId' of type 'System.Nullable`1[System.Int32]'.
+2024-05-15 17:51:52.849 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.DepartmentId' of type 'System.Nullable`1[System.Int32]'.
+2024-05-15 17:51:52.852 +05:30 [DBG] Attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.EmployeeId' of type 'System.Nullable`1[System.Int32]' using the name 'EmployeeId' in request data ...
+2024-05-15 17:51:52.854 +05:30 [DBG] Could not find a value in the request with name 'EmployeeId' for binding property 'EMS.DAL.DTO.EmployeeFilters.EmployeeId' of type 'System.Nullable`1[System.Int32]'.
+2024-05-15 17:51:52.856 +05:30 [DBG] Done attempting to bind property 'EMS.DAL.DTO.EmployeeFilters.EmployeeId' of type 'System.Nullable`1[System.Int32]'.
+2024-05-15 17:51:52.859 +05:30 [DBG] Done attempting to bind parameter 'filters' of type 'EMS.DAL.DTO.EmployeeFilters'.
+2024-05-15 17:51:52.860 +05:30 [DBG] Done attempting to bind parameter 'filters' of type 'EMS.DAL.DTO.EmployeeFilters'.
+2024-05-15 17:51:52.863 +05:30 [DBG] Attempting to validate the bound parameter 'filters' of type 'EMS.DAL.DTO.EmployeeFilters' ...
+2024-05-15 17:51:52.879 +05:30 [DBG] Done attempting to validate the bound parameter 'filters' of type 'EMS.DAL.DTO.EmployeeFilters'.
+2024-05-15 17:51:55.412 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 17:51:55.444 +05:30 [INF] Executed action EMS.API.Controllers.EmployeeController.GetEmployees (EMS.API) in 2903.8884ms
+2024-05-15 17:51:55.449 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.EmployeeController.GetEmployees (EMS.API)'
+2024-05-15 17:51:55.465 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/Api/Employees - 200 null application/json; charset=utf-8 3015.2666ms

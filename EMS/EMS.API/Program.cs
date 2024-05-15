@@ -1,6 +1,5 @@
 using System.Text;
 using EMS.API.Controllers;
-using EMS.API.Interfaces;
 using EMS.BAL;
 using EMS.BAL.Interfaces;
 using EMS.DAL;
@@ -30,19 +29,15 @@ builder.Services.AddLogging(loggingBuilder =>
 });
 
 // Register services
-//builder.Services.AddScoped<DropDownController>();
 builder.Services.AddScoped<IDropdownBAL, DropdownBAL>();
 builder.Services.AddScoped<IDropdownDAL, DropdownDAL>();
 
-//builder.Services.AddScoped<IEmployeeController, EmployeeController>();
 builder.Services.AddScoped<IEmployeeBAL, EmployeeBAL>();
 builder.Services.AddScoped<IEmployeeDAL, EmployeeDAL>();
 
-//builder.Services.AddScoped<IRoleController, RoleController>();
 builder.Services.AddScoped<IRoleBAL, RoleBAL>();
 builder.Services.AddScoped<IRoleDAL, RoleDAL>();
 
-//builder.Services.AddScoped<IAuthController, AuthController>();
 builder.Services.AddScoped<IAuthBAL, AuthBAL>();
 builder.Services.AddScoped<IAuthDAL, AuthDAL>();
 

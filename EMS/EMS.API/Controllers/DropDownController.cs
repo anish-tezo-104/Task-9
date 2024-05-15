@@ -1,5 +1,4 @@
 using EMS.API.Helpers;
-using EMS.API.Interfaces;
 using EMS.BAL;
 using EMS.BAL.Interfaces;
 using EMS.DAL;
@@ -12,7 +11,7 @@ namespace EMS.API.Controllers;
 
 [Route("/Api/DropDown")]
 [ApiController]
-public class DropDownController : IDropDownController
+public class DropDownController : ControllerBase
 {
     private readonly IDropdownBAL _dropdownBal;
     private readonly Serilog.ILogger _logger;

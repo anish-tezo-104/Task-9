@@ -33,7 +33,7 @@ public class EMSContext : DbContext
             // Construct the path to the appsettings.json file
             string appSettingsPath = Path.Combine(baseDirectory, "appsettings.json");
             Console.WriteLine(appSettingsPath);
-            Console.WriteLine(_configuration["ConnectionStrings:DefaultConnection"]);
+            Console.WriteLine(_configuration!["ConnectionStrings:DefaultConnection"]);
 
             // Load configuration from appsettings.json
            

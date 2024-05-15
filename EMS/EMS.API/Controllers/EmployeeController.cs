@@ -1,5 +1,4 @@
 using EMS.API.Helpers;
-using EMS.API.Interfaces;
 using EMS.BAL;
 using EMS.BAL.Interfaces;
 using EMS.DAL;
@@ -15,7 +14,7 @@ namespace EMS.API.Controllers;
 
 [Route("/Api/Employees")]
 [ApiController]
-public class EmployeeController : ControllerBase, IEmployeeController
+public class EmployeeController : ControllerBase
 {
     private readonly IEmployeeBAL _employeeBal;
     private readonly Serilog.ILogger _logger;
