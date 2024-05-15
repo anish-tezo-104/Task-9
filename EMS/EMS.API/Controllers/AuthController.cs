@@ -1,0 +1,127 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using EMS.API.Helpers;
+using EMS.API.Interfaces;
+using EMS.BAL;
+using EMS.BAL.Interfaces;
+using EMS.BAL.Models;
+using EMS.DAL;
+using EMS.DAL.DTO;
+using EMS.DAL.Interfaces;
+using EMS.DAL.Models;
+using EMS.DB.Context;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using BCrypt.Net;
+using Serilog;
+
+namespace EMS.API.Controllers;
+
+[Route("/Auth")]
+[ApiController]
+public class AuthController : ControllerBase, IAuthController
+{
+    private readonly EMSContext _context;
+    private readonly IAuthBAL _authBal;
+    private readonly IAuthDAL _authDal;
+    private readonly Serilog.ILogger _logger;
+    private readonly AppSettings _appSettings;
+    private IConfiguration _configuration;
+
+    public AuthController(IOptions<AppSettings> appSettings, EMSContext context, Serilog.ILogger logger, IConfiguration configuration)
+    {
+        _configuration = configuration;
+        _appSettings = appSettings.Value;
+        _context = context;
+        _logger = logger;
+        _authDal = new AuthDAL(_context);
+        _authBal = new AuthBAL(_logger, _authDal);
+    }
+
+    [AllowAnonymous]
+    [HttpPost("Login")]
+    public async Task<IActionResult> LoginAsync(AuthenticateRequest model)
+    {
+        try
+        {
+            AuthenticateResponse? authResponse = await _authBal.AuthenticateAsync(model.Email);
+            if (authResponse == null || !BCrypt.Net.BCrypt.Verify(model.Password, authResponse.Password))
+            {
+                return ResponseHelper.WrapResponse(401, "error", "Invalid email or password");
+            }
+
+            authResponse.Password = null;
+
+            var token = GenerateJwtToken(authResponse);
+
+            var responseData = new
+            {
+                AuthResponse = authResponse,
+                Token = token
+            };
+
+            return ResponseHelper.WrapResponse(200, "success", responseData);
+        }
+        catch (Exception)
+        {
+            return ResponseHelper.WrapResponse(500, "error", null, ErrorCodes.FAILED_TO_AUTHENTICATE.ToString());
+        }
+    }
+
+    [AllowAnonymous]
+    [HttpPost("Register")]
+    public async Task<IActionResult> RegisterAsync([FromBody] EmployeeDto employee)
+    {
+        try
+        {
+            employee.Password = BCrypt.Net.BCrypt.HashPassword(employee.Password, 12);
+            var result = await _authBal.SignUpAsync(employee);
+            if (result == null || result.IsAuthenticated == false)
+            {
+                throw new InvalidOperationException("Failed to register user");
+            }
+
+            var token = GenerateJwtToken(result);
+
+            var responseData = new
+            {
+                Response = result,
+                Token = token
+            };
+
+            return ResponseHelper.WrapResponse(200, "success", responseData);
+        }
+        catch (Exception)
+        {
+            return ResponseHelper.WrapResponse(500, "error", null, ErrorCodes.FAILED_TO_REGISTER.ToString());
+        }
+    }
+
+    private string GenerateJwtToken(AuthenticateResponse authResponse)
+    {
+        var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+        var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+        var claims = new[]
+        {
+            new Claim(ClaimTypes.NameIdentifier, authResponse!.Id.ToString()!),
+            new Claim(ClaimTypes.Email, authResponse.Email!),
+            new Claim(ClaimTypes.GivenName, authResponse.FirstName!),
+            new Claim(ClaimTypes.Surname, authResponse.LastName!),
+            new Claim(ClaimTypes.Name, authResponse.UID!),
+        };
+
+        var token = new JwtSecurityToken(
+            issuer: _configuration["Jwt:Issuer"],
+            audience: _configuration["Jwt:Audience"],
+            claims: claims,
+            expires: DateTime.Now.AddMinutes(30),
+            signingCredentials: credentials
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}

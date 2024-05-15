@@ -1,0 +1,691 @@
+2024-05-15 12:19:15.621 +05:30 [DBG] Initializing Razor view compiler with no compiled views.
+2024-05-15 12:19:15.712 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-05-15 12:19:15.879 +05:30 [INF] User profile is available. Using 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-15 12:19:16.081 +05:30 [DBG] Hosting starting
+2024-05-15 12:19:16.114 +05:30 [DBG] Reading data from file 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys\key-a1d877de-6025-4a19-8dac-4a7655117c08.xml'.
+2024-05-15 12:19:16.149 +05:30 [DBG] Found key {a1d877de-6025-4a19-8dac-4a7655117c08}.
+2024-05-15 12:19:16.184 +05:30 [DBG] Considering key {a1d877de-6025-4a19-8dac-4a7655117c08} with expiration date 2024-08-05 11:08:49Z as default key.
+2024-05-15 12:19:16.191 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 12:19:16.193 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-05-15 12:19:16.196 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 12:19:16.203 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-05-15 12:19:16.206 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-05-15 12:19:16.210 +05:30 [DBG] Using key {a1d877de-6025-4a19-8dac-4a7655117c08} as the default key.
+2024-05-15 12:19:16.212 +05:30 [DBG] Key ring with default key {a1d877de-6025-4a19-8dac-4a7655117c08} was loaded during application startup.
+2024-05-15 12:19:16.776 +05:30 [INF] Now listening on: https://localhost:7106
+2024-05-15 12:19:16.782 +05:30 [INF] Now listening on: http://localhost:5089
+2024-05-15 12:19:16.788 +05:30 [DBG] Loaded hosting startup assembly EMS.API
+2024-05-15 12:19:16.793 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-05-15 12:19:16.795 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-15 12:19:16.797 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-15 12:19:16.907 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-15 12:19:16.911 +05:30 [INF] Hosting environment: Development
+2024-05-15 12:19:16.912 +05:30 [INF] Content root path: C:\Users\anish.m\OneDrive - TECHNOVERT SOLUTIONS PRIVATE LIMITED\Desktop\office Tezo\Task-9\EMS.API
+2024-05-15 12:19:16.913 +05:30 [DBG] Hosting started
+2024-05-15 12:19:17.199 +05:30 [DBG] Connection id "0HN3KLCI006HO" accepted.
+2024-05-15 12:19:17.199 +05:30 [DBG] Connection id "0HN3KLCI006HP" accepted.
+2024-05-15 12:19:17.280 +05:30 [DBG] Connection id "0HN3KLCI006HO" started.
+2024-05-15 12:19:17.284 +05:30 [DBG] Connection id "0HN3KLCI006HP" started.
+2024-05-15 12:19:19.774 +05:30 [DBG] Connection id "0HN3KLCI006HQ" accepted.
+2024-05-15 12:19:19.882 +05:30 [DBG] Connection id "0HN3KLCI006HR" accepted.
+2024-05-15 12:19:19.884 +05:30 [DBG] Connection id "0HN3KLCI006HQ" started.
+2024-05-15 12:19:19.943 +05:30 [DBG] Connection id "0HN3KLCI006HR" started.
+2024-05-15 12:19:20.046 +05:30 [DBG] Connection id "0HN3KLCI006HR" received FIN.
+2024-05-15 12:19:20.082 +05:30 [DBG] Connection 0HN3KLCI006HQ established using the following protocol: "Tls12"
+2024-05-15 12:19:20.082 +05:30 [DBG] Connection 0HN3KLCI006HR established using the following protocol: "Tls12"
+2024-05-15 12:19:20.133 +05:30 [DBG] Connection id "0HN3KLCI006HR" is closed. The last processed stream ID was 0.
+2024-05-15 12:19:20.198 +05:30 [DBG] Connection id "0HN3KLCI006HR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 12:19:20.205 +05:30 [DBG] The connection queue processing loop for 0HN3KLCI006HR completed.
+2024-05-15 12:19:20.223 +05:30 [DBG] Connection id "0HN3KLCI006HR" stopped.
+2024-05-15 12:19:20.266 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger - null null
+2024-05-15 12:19:20.662 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-15 12:19:20.702 +05:30 [DBG] No candidates found for the request path '/swagger'
+2024-05-15 12:19:20.707 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:21.003 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:21.063 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger - 301 0 null 808.5318ms
+2024-05-15 12:19:21.076 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2024-05-15 12:19:21.108 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-05-15 12:19:21.110 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:21.114 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:21.218 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-05-15 12:19:21.226 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-05-15 12:19:21.283 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-05-15 12:19:21.288 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-05-15 12:19:21.292 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 216.3613ms
+2024-05-15 12:19:21.295 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - null null
+2024-05-15 12:19:21.302 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2024-05-15 12:19:21.306 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - null null
+2024-05-15 12:19:21.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - null null
+2024-05-15 12:19:21.306 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:21.313 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-15 12:19:21.312 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - null null
+2024-05-15 12:19:21.323 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2024-05-15 12:19:21.326 +05:30 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2024-05-15 12:19:21.336 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:21.331 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:21.350 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:21.351 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:21.355 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:21.351 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 38.0508ms
+2024-05-15 12:19:21.427 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-05-15 12:19:21.468 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - 200 143943 text/css 173.6523ms
+2024-05-15 12:19:21.469 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-05-15 12:19:21.533 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 227.2752ms
+2024-05-15 12:19:21.557 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - 200 null text/javascript; charset=UTF-8 246.8108ms
+2024-05-15 12:19:21.562 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-05-15 12:19:21.578 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 272.7271ms
+2024-05-15 12:19:21.923 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2024-05-15 12:19:21.927 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-05-15 12:19:21.929 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:21.930 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:21.977 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - null null
+2024-05-15 12:19:21.999 +05:30 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2024-05-15 12:19:22.003 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 12:19:22.024 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:22.042 +05:30 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-05-15 12:19:22.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - 200 628 image/png 122.1514ms
+2024-05-15 12:19:22.255 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 331.683ms
+2024-05-15 12:19:27.302 +05:30 [DBG] Authentication of the HTTPS connection timed out.
+2024-05-15 12:19:27.302 +05:30 [DBG] Authentication of the HTTPS connection timed out.
+2024-05-15 12:19:27.303 +05:30 [DBG] Connection id "0HN3KLCI006HO" stopped.
+2024-05-15 12:19:27.304 +05:30 [DBG] Connection id "0HN3KLCI006HP" stopped.
+2024-05-15 12:19:27.305 +05:30 [DBG] Connection id "0HN3KLCI006HO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 12:19:27.305 +05:30 [DBG] Connection id "0HN3KLCI006HP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 12:19:40.622 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 62
+2024-05-15 12:19:40.629 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 12:19:40.635 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 12:19:40.639 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 12:19:40.640 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:40.641 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 12:19:40.653 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 12:19:40.685 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 12:19:40.689 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 12:19:40.691 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 12:19:40.692 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 12:19:40.693 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 12:19:40.694 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 12:19:40.698 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 12:19:40.813 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 12:19:40.831 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 12:19:40.835 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' using the name '' in request data ...
+2024-05-15 12:19:40.839 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-05-15 12:19:40.844 +05:30 [DBG] Connection id "0HN3KLCI006HQ", Request id "0HN3KLCI006HQ:00000013": started reading request body.
+2024-05-15 12:19:40.845 +05:30 [DBG] Connection id "0HN3KLCI006HQ", Request id "0HN3KLCI006HQ:00000013": done reading request body.
+2024-05-15 12:19:40.850 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'EMS.DAL.Models.AuthenticateRequest'
+2024-05-15 12:19:40.852 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 12:19:40.853 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 12:19:40.854 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 12:19:40.861 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 12:19:41.019 +05:30 [DBG] An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: configuration changed for 'Core:ConfigureWarnings', configuration added for 'SqlServer', configuration added for 'CompatibilityLevel'.
+2024-05-15 12:19:41.667 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 12:19:41.724 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()
+    .SingleOrDefault(x => x.Email == __email_0)'
+2024-05-15 12:19:41.892 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Employee>(
+    asyncEnumerable: new SingleQueryingEnumerable<Employee>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.DepartmentId (int?) FK Index, 1], [Property: Employee.Dob (DateTime?), 2], [Property: Employee.Email (string) MaxLength(255), 3], [Property: Employee.FirstName (string) MaxLength(50), 4], [Property: Employee.IsManager (bool) Required, 5], [Property: Employee.JoiningDate (DateTime?), 6], [Property: Employee.LastName (string) MaxLength(50), 7], [Property: Employee.LocationId (int?) FK Index, 8], [Property: Employee.ManagerId (int?) FK Index, 9], [Property: Employee.MobileNumber (string) MaxLength(20), 10], [Property: Employee.Password (string) Required MaxLength(16), 11], [Property: Employee.ProjectId (int?) FK Index, 12], [Property: Employee.RoleId (int?) FK Index, 13], [Property: Employee.Status (bool) Required, 14], [Property: Employee.UID (string) Required MaxLength(10), 15] }
+            SELECT TOP(2) e.Id, e.DepartmentId, e.Dob, e.Email, e.FirstName, e.IsManager, e.JoiningDate, e.LastName, e.LocationId, e.ManagerId, e.MobileNumber, e.Password, e.ProjectId, e.RoleId, e.Status, e.UID
+            FROM Employee AS e
+            WHERE e.Email == @__email_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+        EMS.DB.Context.EMSContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-05-15 12:19:41.929 +05:30 [DBG] Creating DbConnection.
+2024-05-15 12:19:41.957 +05:30 [DBG] Created DbConnection. (26ms).
+2024-05-15 12:19:41.961 +05:30 [DBG] Opening connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:19:42.573 +05:30 [DBG] Opened connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:19:42.577 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 12:19:42.581 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (3ms).
+2024-05-15 12:19:42.592 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (15ms).
+2024-05-15 12:19:42.601 +05:30 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 12:19:42.667 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 12:19:42.706 +05:30 [DBG] Context 'EMSContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-05-15 12:19:42.749 +05:30 [DBG] Closing data reader to 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:19:42.756 +05:30 [DBG] A data reader for 'AnishEmployeeDb' on server '10.0.0.27' is being disposed after spending 83ms reading results.
+2024-05-15 12:19:42.760 +05:30 [DBG] Closing connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:19:42.766 +05:30 [DBG] Closed connection to database 'AnishEmployeeDb' on server '10.0.0.27' (6ms).
+2024-05-15 12:19:43.441 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 12:19:43.452 +05:30 [INF] Executed action EMS.API.Controllers.AuthController.LoginAsync (EMS.API) in 2754.598ms
+2024-05-15 12:19:43.454 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 12:19:43.457 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 12:19:43.461 +05:30 [DBG] Disposing connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:19:43.463 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-05-15 12:19:43.465 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7106/Auth/Login - 200 null application/json; charset=utf-8 2842.9734ms
+2024-05-15 12:19:52.579 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/Api/DropDown/Departments - null null
+2024-05-15 12:19:52.583 +05:30 [DBG] 1 candidate(s) found for the request path '/Api/DropDown/Departments'
+2024-05-15 12:19:52.585 +05:30 [DBG] Endpoint 'EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API)' with route pattern 'Api/DropDown/Departments' is valid for the request path '/Api/DropDown/Departments'
+2024-05-15 12:19:52.587 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API)'
+2024-05-15 12:19:52.589 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 12:19:52.591 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 12:19:52.596 +05:30 [DBG] Policy authentication schemes  did not succeed
+2024-05-15 12:19:52.602 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-05-15 12:19:52.607 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-05-15 12:19:52.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/Api/DropDown/Departments - 401 0 null 30.1762ms
+2024-05-15 12:20:00.657 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/Api/DropDown/Departments - null null
+2024-05-15 12:20:00.662 +05:30 [DBG] 1 candidate(s) found for the request path '/Api/DropDown/Departments'
+2024-05-15 12:20:00.663 +05:30 [DBG] Endpoint 'EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API)' with route pattern 'Api/DropDown/Departments' is valid for the request path '/Api/DropDown/Departments'
+2024-05-15 12:20:00.664 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API)'
+2024-05-15 12:20:00.713 +05:30 [DBG] Successfully validated the token.
+2024-05-15 12:20:00.717 +05:30 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-05-15 12:20:00.719 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 12:20:00.721 +05:30 [DBG] Authorization was successful.
+2024-05-15 12:20:00.722 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API)'
+2024-05-15 12:20:00.727 +05:30 [INF] Route matched with {action = "GetDepartments", controller = "DropDown"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDepartmentsAsync() on controller EMS.API.Controllers.DropDownController (EMS.API).
+2024-05-15 12:20:00.730 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 12:20:00.730 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 12:20:00.731 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 12:20:00.732 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 12:20:00.733 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 12:20:00.734 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.DropDownController (EMS.API)
+2024-05-15 12:20:00.740 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.DropDownController (EMS.API)
+2024-05-15 12:20:00.757 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 12:20:00.766 +05:30 [DBG] Compiling query expression: 
+'DbSet<Department>()
+    .Select(department => new Dropdown{ 
+        Id = department.Id, 
+        Name = department.Name 
+    }
+    )'
+2024-05-15 12:20:00.779 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Dropdown>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            Id -> 0
+            Name -> 1
+        SELECT d.Id, d.Name
+        FROM Department AS d), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Dropdown>, 
+    EMS.DB.Context.EMSContext, 
+    False, 
+    False, 
+    True
+)'
+2024-05-15 12:20:00.781 +05:30 [DBG] Creating DbConnection.
+2024-05-15 12:20:00.782 +05:30 [DBG] Created DbConnection. (0ms).
+2024-05-15 12:20:00.782 +05:30 [DBG] Opening connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:20:00.784 +05:30 [DBG] Opened connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:20:00.784 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 12:20:00.785 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-05-15 12:20:00.786 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2024-05-15 12:20:00.786 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name]
+FROM [Department] AS [d]
+2024-05-15 12:20:00.796 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name]
+FROM [Department] AS [d]
+2024-05-15 12:20:00.799 +05:30 [DBG] Closing data reader to 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:20:00.800 +05:30 [DBG] A data reader for 'AnishEmployeeDb' on server '10.0.0.27' is being disposed after spending 1ms reading results.
+2024-05-15 12:20:00.801 +05:30 [DBG] Closing connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:20:00.801 +05:30 [DBG] Closed connection to database 'AnishEmployeeDb' on server '10.0.0.27' (0ms).
+2024-05-15 12:20:00.802 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 12:20:00.805 +05:30 [INF] Executed action EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API) in 71.1863ms
+2024-05-15 12:20:00.808 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.DropDownController.GetDepartmentsAsync (EMS.API)'
+2024-05-15 12:20:00.810 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 12:20:00.811 +05:30 [DBG] Disposing connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 12:20:00.811 +05:30 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-05-15 12:20:00.812 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/Api/DropDown/Departments - 200 null application/json; charset=utf-8 155.2866ms
+2024-05-15 14:01:46.871 +05:30 [DBG] Initializing Razor view compiler with no compiled views.
+2024-05-15 14:01:46.983 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-05-15 14:01:47.101 +05:30 [INF] User profile is available. Using 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-15 14:01:47.219 +05:30 [DBG] Hosting starting
+2024-05-15 14:01:47.231 +05:30 [DBG] Reading data from file 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys\key-a1d877de-6025-4a19-8dac-4a7655117c08.xml'.
+2024-05-15 14:01:47.250 +05:30 [DBG] Found key {a1d877de-6025-4a19-8dac-4a7655117c08}.
+2024-05-15 14:01:47.265 +05:30 [DBG] Considering key {a1d877de-6025-4a19-8dac-4a7655117c08} with expiration date 2024-08-05 11:08:49Z as default key.
+2024-05-15 14:01:47.271 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 14:01:47.275 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-05-15 14:01:47.280 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 14:01:47.285 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-05-15 14:01:47.290 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-05-15 14:01:47.294 +05:30 [DBG] Using key {a1d877de-6025-4a19-8dac-4a7655117c08} as the default key.
+2024-05-15 14:01:47.296 +05:30 [DBG] Key ring with default key {a1d877de-6025-4a19-8dac-4a7655117c08} was loaded during application startup.
+2024-05-15 14:01:47.670 +05:30 [INF] Now listening on: https://localhost:7106
+2024-05-15 14:01:47.673 +05:30 [INF] Now listening on: http://localhost:5089
+2024-05-15 14:01:47.676 +05:30 [DBG] Loaded hosting startup assembly EMS.API
+2024-05-15 14:01:47.677 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-05-15 14:01:47.678 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-15 14:01:47.682 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-15 14:01:47.751 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-15 14:01:47.754 +05:30 [INF] Hosting environment: Development
+2024-05-15 14:01:47.755 +05:30 [INF] Content root path: C:\Users\anish.m\OneDrive - TECHNOVERT SOLUTIONS PRIVATE LIMITED\Desktop\office Tezo\Task-9\EMS.API
+2024-05-15 14:01:47.757 +05:30 [DBG] Hosting started
+2024-05-15 14:01:47.843 +05:30 [DBG] Connection id "0HN3KN5R1412M" accepted.
+2024-05-15 14:01:47.848 +05:30 [DBG] Connection id "0HN3KN5R1412M" started.
+2024-05-15 14:01:47.880 +05:30 [DBG] Connection id "0HN3KN5R1412M" received FIN.
+2024-05-15 14:01:47.893 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-05-15 14:01:47.976 +05:30 [DBG] Connection id "0HN3KN5R1412M" stopped.
+2024-05-15 14:01:47.982 +05:30 [DBG] Connection id "0HN3KN5R1412M" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 14:01:48.423 +05:30 [DBG] Connection id "0HN3KN5R1412N" accepted.
+2024-05-15 14:01:48.532 +05:30 [DBG] Connection id "0HN3KN5R1412N" started.
+2024-05-15 14:01:48.902 +05:30 [DBG] Connection 0HN3KN5R1412N established using the following protocol: "Tls12"
+2024-05-15 14:01:49.112 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2024-05-15 14:01:49.411 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-15 14:01:49.452 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-05-15 14:01:49.455 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 14:01:49.638 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:01:49.825 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-05-15 14:01:49.833 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-05-15 14:01:49.908 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-05-15 14:01:49.919 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-05-15 14:01:49.930 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 830.5852ms
+2024-05-15 14:01:49.965 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-15 14:01:49.965 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - null null
+2024-05-15 14:01:50.015 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 49.8408ms
+2024-05-15 14:01:50.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - 200 null text/javascript; charset=UTF-8 137.0069ms
+2024-05-15 14:01:50.495 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2024-05-15 14:01:50.503 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-05-15 14:01:50.506 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 14:01:50.510 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:01:50.871 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 375.9761ms
+2024-05-15 14:02:17.912 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 62
+2024-05-15 14:02:17.946 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 14:02:17.960 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 14:02:17.968 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:17.977 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:02:17.983 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 14:02:17.989 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:18.046 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 14:02:18.052 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 14:02:18.056 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 14:02:18.059 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 14:02:18.061 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 14:02:18.063 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 14:02:18.067 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:02:18.333 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-05-15 14:02:18.379 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:02:18.410 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:02:18.416 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' using the name '' in request data ...
+2024-05-15 14:02:18.420 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-05-15 14:02:18.430 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:00000009": started reading request body.
+2024-05-15 14:02:18.433 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:00000009": done reading request body.
+2024-05-15 14:02:18.443 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'EMS.DAL.Models.AuthenticateRequest'
+2024-05-15 14:02:18.449 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:18.452 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:18.454 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:02:18.468 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:20.428 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 14:02:20.526 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()
+    .SingleOrDefault(x => x.Email == __email_0)'
+2024-05-15 14:02:20.969 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Employee>(
+    asyncEnumerable: new SingleQueryingEnumerable<Employee>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.DepartmentId (int?) FK Index, 1], [Property: Employee.Dob (DateTime?), 2], [Property: Employee.Email (string) MaxLength(255), 3], [Property: Employee.FirstName (string) MaxLength(50), 4], [Property: Employee.IsManager (bool) Required, 5], [Property: Employee.JoiningDate (DateTime?), 6], [Property: Employee.LastName (string) MaxLength(50), 7], [Property: Employee.LocationId (int?) FK Index, 8], [Property: Employee.ManagerId (int?) FK Index, 9], [Property: Employee.MobileNumber (string) MaxLength(20), 10], [Property: Employee.Password (string) Required MaxLength(16), 11], [Property: Employee.ProjectId (int?) FK Index, 12], [Property: Employee.RoleId (int?) FK Index, 13], [Property: Employee.Status (bool) Required, 14], [Property: Employee.UID (string) Required MaxLength(10), 15] }
+            SELECT TOP(2) e.Id, e.DepartmentId, e.Dob, e.Email, e.FirstName, e.IsManager, e.JoiningDate, e.LastName, e.LocationId, e.ManagerId, e.MobileNumber, e.Password, e.ProjectId, e.RoleId, e.Status, e.UID
+            FROM Employee AS e
+            WHERE e.Email == @__email_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+        EMS.DB.Context.EMSContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-05-15 14:02:21.059 +05:30 [DBG] Creating DbConnection.
+2024-05-15 14:02:21.112 +05:30 [DBG] Created DbConnection. (49ms).
+2024-05-15 14:02:21.133 +05:30 [DBG] Opening connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:23.665 +05:30 [DBG] Opened connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:23.678 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 14:02:23.700 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (14ms).
+2024-05-15 14:02:23.746 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (67ms).
+2024-05-15 14:02:23.789 +05:30 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:02:24.011 +05:30 [INF] Executed DbCommand (237ms) [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:02:24.051 +05:30 [DBG] Closing data reader to 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:24.071 +05:30 [DBG] A data reader for 'AnishEMS_Db' on server '10.0.0.27' is being disposed after spending 41ms reading results.
+2024-05-15 14:02:24.080 +05:30 [DBG] Closing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:24.091 +05:30 [DBG] Closed connection to database 'AnishEMS_Db' on server '10.0.0.27' (10ms).
+2024-05-15 14:02:24.102 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 14:02:24.127 +05:30 [INF] Executed action EMS.API.Controllers.AuthController.LoginAsync (EMS.API) in 6052.1173ms
+2024-05-15 14:02:24.133 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:24.143 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 14:02:24.149 +05:30 [DBG] Disposing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:24.153 +05:30 [DBG] Disposed connection to database '' on server '' (3ms).
+2024-05-15 14:02:24.155 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7106/Auth/Login - 401 null application/json; charset=utf-8 6245.0179ms
+2024-05-15 14:02:31.917 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 63
+2024-05-15 14:02:31.927 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 14:02:31.930 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 14:02:31.934 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:31.941 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:02:31.945 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 14:02:31.948 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:31.952 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 14:02:31.960 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 14:02:31.963 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 14:02:31.966 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 14:02:31.975 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 14:02:31.979 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 14:02:31.986 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:02:31.994 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:02:32.000 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:02:32.007 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' using the name '' in request data ...
+2024-05-15 14:02:32.013 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-05-15 14:02:32.018 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:0000000B": started reading request body.
+2024-05-15 14:02:32.023 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:0000000B": done reading request body.
+2024-05-15 14:02:32.030 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'EMS.DAL.Models.AuthenticateRequest'
+2024-05-15 14:02:32.034 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:32.036 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:32.040 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:02:32.044 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:32.086 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 14:02:32.104 +05:30 [DBG] Creating DbConnection.
+2024-05-15 14:02:32.108 +05:30 [DBG] Created DbConnection. (4ms).
+2024-05-15 14:02:32.111 +05:30 [DBG] Opening connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:32.117 +05:30 [DBG] Opened connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:32.121 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 14:02:32.127 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (6ms).
+2024-05-15 14:02:32.132 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (10ms).
+2024-05-15 14:02:32.134 +05:30 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:02:32.192 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:02:32.210 +05:30 [DBG] Closing data reader to 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:32.220 +05:30 [DBG] A data reader for 'AnishEMS_Db' on server '10.0.0.27' is being disposed after spending 9ms reading results.
+2024-05-15 14:02:32.230 +05:30 [DBG] Closing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:32.239 +05:30 [DBG] Closed connection to database 'AnishEMS_Db' on server '10.0.0.27' (8ms).
+2024-05-15 14:02:32.252 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 14:02:32.261 +05:30 [INF] Executed action EMS.API.Controllers.AuthController.LoginAsync (EMS.API) in 275.5609ms
+2024-05-15 14:02:32.270 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:32.303 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 14:02:32.314 +05:30 [DBG] Disposing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:32.318 +05:30 [DBG] Disposed connection to database '' on server '' (4ms).
+2024-05-15 14:02:32.323 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7106/Auth/Login - 401 null application/json; charset=utf-8 406.8252ms
+2024-05-15 14:02:43.191 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 62
+2024-05-15 14:02:43.194 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 14:02:43.197 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 14:02:43.199 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:43.203 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:02:43.205 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 14:02:43.206 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:43.208 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 14:02:43.216 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 14:02:43.220 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 14:02:43.223 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 14:02:43.227 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 14:02:43.228 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 14:02:43.230 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:02:43.239 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:02:43.241 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:02:43.242 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' using the name '' in request data ...
+2024-05-15 14:02:43.244 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-05-15 14:02:43.245 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:0000000D": started reading request body.
+2024-05-15 14:02:43.247 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:0000000D": done reading request body.
+2024-05-15 14:02:43.248 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'EMS.DAL.Models.AuthenticateRequest'
+2024-05-15 14:02:43.249 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:43.251 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:43.253 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:02:43.255 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:02:43.333 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 14:02:43.343 +05:30 [DBG] Creating DbConnection.
+2024-05-15 14:02:43.344 +05:30 [DBG] Created DbConnection. (1ms).
+2024-05-15 14:02:43.346 +05:30 [DBG] Opening connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:43.348 +05:30 [DBG] Opened connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:43.350 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 14:02:43.351 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-05-15 14:02:43.353 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2024-05-15 14:02:43.355 +05:30 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:02:43.431 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:02:43.434 +05:30 [DBG] Closing data reader to 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:43.436 +05:30 [DBG] A data reader for 'AnishEMS_Db' on server '10.0.0.27' is being disposed after spending 2ms reading results.
+2024-05-15 14:02:43.438 +05:30 [DBG] Closing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:43.439 +05:30 [DBG] Closed connection to database 'AnishEMS_Db' on server '10.0.0.27' (1ms).
+2024-05-15 14:02:43.441 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 14:02:43.443 +05:30 [INF] Executed action EMS.API.Controllers.AuthController.LoginAsync (EMS.API) in 212.903ms
+2024-05-15 14:02:43.445 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:02:43.447 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 14:02:43.448 +05:30 [DBG] Disposing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:02:43.450 +05:30 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-05-15 14:02:43.452 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7106/Auth/Login - 401 null application/json; charset=utf-8 260.7168ms
+2024-05-15 14:04:12.348 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 62
+2024-05-15 14:04:12.367 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 14:04:12.371 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 14:04:12.377 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:04:12.380 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:04:12.382 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 14:04:12.384 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:04:12.386 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 14:04:12.389 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 14:04:12.393 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 14:04:12.394 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 14:04:12.396 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 14:04:12.397 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 14:04:12.399 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:04:12.400 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:04:12.401 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:04:12.402 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' using the name '' in request data ...
+2024-05-15 14:04:12.404 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-05-15 14:04:12.406 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:0000000F": started reading request body.
+2024-05-15 14:04:12.407 +05:30 [DBG] Connection id "0HN3KN5R1412N", Request id "0HN3KN5R1412N:0000000F": done reading request body.
+2024-05-15 14:04:12.408 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'EMS.DAL.Models.AuthenticateRequest'
+2024-05-15 14:04:12.409 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:04:12.410 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:04:12.411 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:04:12.412 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:04:12.414 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 14:04:12.418 +05:30 [DBG] Creating DbConnection.
+2024-05-15 14:04:12.419 +05:30 [DBG] Created DbConnection. (1ms).
+2024-05-15 14:04:12.421 +05:30 [DBG] Opening connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:04:12.424 +05:30 [DBG] Opened connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:04:12.426 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 14:04:12.427 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-05-15 14:04:12.428 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2024-05-15 14:04:12.429 +05:30 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:04:12.449 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:04:12.452 +05:30 [DBG] Closing data reader to 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:04:12.453 +05:30 [DBG] A data reader for 'AnishEMS_Db' on server '10.0.0.27' is being disposed after spending 1ms reading results.
+2024-05-15 14:04:12.455 +05:30 [DBG] Closing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:04:12.456 +05:30 [DBG] Closed connection to database 'AnishEMS_Db' on server '10.0.0.27' (0ms).
+2024-05-15 14:04:12.457 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 14:04:12.458 +05:30 [INF] Executed action EMS.API.Controllers.AuthController.LoginAsync (EMS.API) in 58.9909ms
+2024-05-15 14:04:12.463 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:04:12.464 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 14:04:12.465 +05:30 [DBG] Disposing connection to database 'AnishEMS_Db' on server '10.0.0.27'.
+2024-05-15 14:04:12.466 +05:30 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-05-15 14:04:12.466 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7106/Auth/Login - 401 null application/json; charset=utf-8 120.1109ms
+2024-05-15 14:05:06.348 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-05-15 14:05:06.618 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-05-15 14:05:11.187 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 62
+2024-05-15 14:05:11.192 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-15 14:05:11.193 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 14:05:11.195 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 14:05:11.199 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:05:11.207 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:05:11.212 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 14:05:11.214 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:05:11.217 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 14:05:11.225 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 14:05:11.228 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 14:05:11.231 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 14:05:11.236 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 14:05:11.242 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 14:05:11.246 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:05:27.904 +05:30 [DBG] Initializing Razor view compiler with no compiled views.
+2024-05-15 14:05:28.001 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-05-15 14:05:28.104 +05:30 [INF] User profile is available. Using 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-15 14:05:28.228 +05:30 [DBG] Hosting starting
+2024-05-15 14:05:28.250 +05:30 [DBG] Reading data from file 'C:\Users\anish.m\AppData\Local\ASP.NET\DataProtection-Keys\key-a1d877de-6025-4a19-8dac-4a7655117c08.xml'.
+2024-05-15 14:05:28.284 +05:30 [DBG] Found key {a1d877de-6025-4a19-8dac-4a7655117c08}.
+2024-05-15 14:05:28.313 +05:30 [DBG] Considering key {a1d877de-6025-4a19-8dac-4a7655117c08} with expiration date 2024-08-05 11:08:49Z as default key.
+2024-05-15 14:05:28.329 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 14:05:28.335 +05:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-05-15 14:05:28.340 +05:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-15 14:05:28.354 +05:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-05-15 14:05:28.363 +05:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-05-15 14:05:28.368 +05:30 [DBG] Using key {a1d877de-6025-4a19-8dac-4a7655117c08} as the default key.
+2024-05-15 14:05:28.371 +05:30 [DBG] Key ring with default key {a1d877de-6025-4a19-8dac-4a7655117c08} was loaded during application startup.
+2024-05-15 14:05:28.608 +05:30 [INF] Now listening on: https://localhost:7106
+2024-05-15 14:05:28.611 +05:30 [INF] Now listening on: http://localhost:5089
+2024-05-15 14:05:28.613 +05:30 [DBG] Loaded hosting startup assembly EMS.API
+2024-05-15 14:05:28.614 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-05-15 14:05:28.616 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-15 14:05:28.617 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-15 14:05:28.646 +05:30 [DBG] Connection id "0HN3KN7SQRPPA" accepted.
+2024-05-15 14:05:28.650 +05:30 [DBG] Connection id "0HN3KN7SQRPPA" started.
+2024-05-15 14:05:28.651 +05:30 [DBG] Connection id "0HN3KN7SQRPPB" accepted.
+2024-05-15 14:05:28.653 +05:30 [DBG] Connection id "0HN3KN7SQRPPB" started.
+2024-05-15 14:05:28.669 +05:30 [DBG] Connection id "0HN3KN7SQRPPA" received FIN.
+2024-05-15 14:05:28.669 +05:30 [DBG] Connection id "0HN3KN7SQRPPB" received FIN.
+2024-05-15 14:05:28.694 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-05-15 14:05:28.694 +05:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-05-15 14:05:28.749 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-15 14:05:28.760 +05:30 [DBG] Connection id "0HN3KN7SQRPPA" stopped.
+2024-05-15 14:05:28.761 +05:30 [DBG] Connection id "0HN3KN7SQRPPB" stopped.
+2024-05-15 14:05:28.767 +05:30 [INF] Hosting environment: Development
+2024-05-15 14:05:28.772 +05:30 [DBG] Connection id "0HN3KN7SQRPPB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 14:05:28.773 +05:30 [INF] Content root path: C:\Users\anish.m\OneDrive - TECHNOVERT SOLUTIONS PRIVATE LIMITED\Desktop\office Tezo\Task-9\EMS.API
+2024-05-15 14:05:28.772 +05:30 [DBG] Connection id "0HN3KN7SQRPPA" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-05-15 14:05:28.789 +05:30 [DBG] Hosting started
+2024-05-15 14:05:29.155 +05:30 [DBG] Connection id "0HN3KN7SQRPPC" accepted.
+2024-05-15 14:05:29.169 +05:30 [DBG] Connection id "0HN3KN7SQRPPC" started.
+2024-05-15 14:05:29.536 +05:30 [DBG] Connection 0HN3KN7SQRPPC established using the following protocol: "Tls12"
+2024-05-15 14:05:29.878 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2024-05-15 14:05:30.397 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-15 14:05:30.462 +05:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-05-15 14:05:30.468 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 14:05:30.668 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:05:30.829 +05:30 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-05-15 14:05:30.837 +05:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-05-15 14:05:30.874 +05:30 [DBG] Response markup was updated to include Browser Link script injection.
+2024-05-15 14:05:30.877 +05:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-05-15 14:05:30.888 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 1013.1997ms
+2024-05-15 14:05:30.950 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - null null
+2024-05-15 14:05:30.950 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - null null
+2024-05-15 14:05:31.002 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - 200 13750 application/javascript; charset=utf-8 51.5425ms
+2024-05-15 14:05:31.082 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - 200 null text/javascript; charset=UTF-8 131.97ms
+2024-05-15 14:05:31.226 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2024-05-15 14:05:31.237 +05:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-05-15 14:05:31.239 +05:30 [DBG] Request did not match any endpoints
+2024-05-15 14:05:31.249 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:05:31.695 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 468.2347ms
+2024-05-15 14:05:51.843 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7106/Auth/Login - application/json 62
+2024-05-15 14:05:51.856 +05:30 [DBG] 1 candidate(s) found for the request path '/Auth/Login'
+2024-05-15 14:05:51.864 +05:30 [DBG] Endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)' with route pattern 'Auth/Login' is valid for the request path '/Auth/Login'
+2024-05-15 14:05:51.873 +05:30 [DBG] Request matched endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:05:51.882 +05:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-05-15 14:05:51.886 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-05-15 14:05:51.894 +05:30 [INF] Executing endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:05:51.947 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAsync(EMS.DAL.Models.AuthenticateRequest) on controller EMS.API.Controllers.AuthController (EMS.API).
+2024-05-15 14:05:51.955 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-05-15 14:05:51.960 +05:30 [DBG] Execution plan of resource filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter"]
+2024-05-15 14:05:51.965 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-05-15 14:05:51.977 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-05-15 14:05:51.980 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter","Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-05-15 14:05:51.996 +05:30 [DBG] Executing controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:05:52.259 +05:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-05-15 14:05:52.305 +05:30 [DBG] Executed controller factory for controller EMS.API.Controllers.AuthController (EMS.API)
+2024-05-15 14:05:52.324 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:05:52.329 +05:30 [DBG] Attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' using the name '' in request data ...
+2024-05-15 14:05:52.332 +05:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-05-15 14:05:52.343 +05:30 [DBG] Connection id "0HN3KN7SQRPPC", Request id "0HN3KN7SQRPPC:00000009": started reading request body.
+2024-05-15 14:05:52.344 +05:30 [DBG] Connection id "0HN3KN7SQRPPC", Request id "0HN3KN7SQRPPC:00000009": done reading request body.
+2024-05-15 14:05:52.350 +05:30 [DBG] JSON input formatter succeeded, deserializing to type 'EMS.DAL.Models.AuthenticateRequest'
+2024-05-15 14:05:52.353 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:05:52.356 +05:30 [DBG] Done attempting to bind parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:05:52.359 +05:30 [DBG] Attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest' ...
+2024-05-15 14:05:52.370 +05:30 [DBG] Done attempting to validate the bound parameter 'model' of type 'EMS.DAL.Models.AuthenticateRequest'.
+2024-05-15 14:05:54.202 +05:30 [DBG] Entity Framework Core 8.0.4 initialized 'EMSContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.4' with options: None
+2024-05-15 14:05:54.381 +05:30 [DBG] Compiling query expression: 
+'DbSet<Employee>()
+    .SingleOrDefault(x => x.Email == __email_0)'
+2024-05-15 14:05:54.898 +05:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Employee>(
+    asyncEnumerable: new SingleQueryingEnumerable<Employee>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Employee.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Employee.DepartmentId (int?) FK Index, 1], [Property: Employee.Dob (DateTime?), 2], [Property: Employee.Email (string) MaxLength(255), 3], [Property: Employee.FirstName (string) MaxLength(50), 4], [Property: Employee.IsManager (bool) Required, 5], [Property: Employee.JoiningDate (DateTime?), 6], [Property: Employee.LastName (string) MaxLength(50), 7], [Property: Employee.LocationId (int?) FK Index, 8], [Property: Employee.ManagerId (int?) FK Index, 9], [Property: Employee.MobileNumber (string) MaxLength(20), 10], [Property: Employee.Password (string) Required MaxLength(16), 11], [Property: Employee.ProjectId (int?) FK Index, 12], [Property: Employee.RoleId (int?) FK Index, 13], [Property: Employee.Status (bool) Required, 14], [Property: Employee.UID (string) Required MaxLength(10), 15] }
+            SELECT TOP(2) e.Id, e.DepartmentId, e.Dob, e.Email, e.FirstName, e.IsManager, e.JoiningDate, e.LastName, e.LocationId, e.ManagerId, e.MobileNumber, e.Password, e.ProjectId, e.RoleId, e.Status, e.UID
+            FROM Employee AS e
+            WHERE e.Email == @__email_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Employee>, 
+        EMS.DB.Context.EMSContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-05-15 14:05:54.998 +05:30 [DBG] Creating DbConnection.
+2024-05-15 14:05:55.053 +05:30 [DBG] Created DbConnection. (47ms).
+2024-05-15 14:05:55.062 +05:30 [DBG] Opening connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 14:05:55.685 +05:30 [DBG] Opened connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 14:05:55.697 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-05-15 14:05:55.716 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (9ms).
+2024-05-15 14:05:55.751 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (53ms).
+2024-05-15 14:05:55.781 +05:30 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:05:55.926 +05:30 [INF] Executed DbCommand (152ms) [Parameters=[@__email_0='?' (Size = 255) (DbType = AnsiString)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [e].[Id], [e].[DepartmentId], [e].[Dob], [e].[Email], [e].[FirstName], [e].[IsManager], [e].[JoiningDate], [e].[LastName], [e].[LocationId], [e].[ManagerId], [e].[MobileNumber], [e].[Password], [e].[ProjectId], [e].[RoleId], [e].[Status], [e].[UID]
+FROM [Employee] AS [e]
+WHERE [e].[Email] = @__email_0
+2024-05-15 14:05:56.062 +05:30 [DBG] Context 'EMSContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-05-15 14:05:56.237 +05:30 [DBG] Closing data reader to 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 14:05:56.253 +05:30 [DBG] A data reader for 'AnishEmployeeDb' on server '10.0.0.27' is being disposed after spending 310ms reading results.
+2024-05-15 14:05:56.275 +05:30 [DBG] Closing connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 14:05:56.301 +05:30 [DBG] Closed connection to database 'AnishEmployeeDb' on server '10.0.0.27' (26ms).
+2024-05-15 14:05:58.280 +05:30 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType2`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-05-15 14:05:58.328 +05:30 [INF] Executed action EMS.API.Controllers.AuthController.LoginAsync (EMS.API) in 6328.5472ms
+2024-05-15 14:05:58.332 +05:30 [INF] Executed endpoint 'EMS.API.Controllers.AuthController.LoginAsync (EMS.API)'
+2024-05-15 14:05:58.342 +05:30 [DBG] 'EMSContext' disposed.
+2024-05-15 14:05:58.356 +05:30 [DBG] Disposing connection to database 'AnishEmployeeDb' on server '10.0.0.27'.
+2024-05-15 14:05:58.360 +05:30 [DBG] Disposed connection to database '' on server '' (4ms).
+2024-05-15 14:05:58.363 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7106/Auth/Login - 200 null application/json; charset=utf-8 6519.7628ms
+2024-05-15 14:06:22.173 +05:30 [DBG] Config reload token fired. Checking for changes...
+2024-05-15 14:06:22.443 +05:30 [DBG] Config reload token fired. Checking for changes...
