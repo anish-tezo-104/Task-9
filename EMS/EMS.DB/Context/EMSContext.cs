@@ -23,6 +23,8 @@ public class EMSContext : DbContext
     public DbSet<Project> Project { get; set; }
     public DbSet<Location> Location { get; set; }
 
+    public DbSet<Mode> Mode { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
@@ -72,6 +74,12 @@ public class EMSContext : DbContext
             .HasForeignKey(e => e.ProjectId)
             .IsRequired(false);
 
+        modelBuilder.Entity<Employee>()
+            .HasOne(e => e.Mode)
+            .WithMany(m => m.Employee)
+            .HasForeignKey(e => e.ModeStatusId)
+            .IsRequired(false);
+
         modelBuilder.Entity<Location>()
             .HasKey(l => l.Id);
 
@@ -83,5 +91,8 @@ public class EMSContext : DbContext
 
         modelBuilder.Entity<Project>()
             .HasKey(p => p.Id);
+
+        modelBuilder.Entity<Mode>()
+            .HasKey(m => m.Id);
     }
 }

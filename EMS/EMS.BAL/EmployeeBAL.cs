@@ -73,7 +73,7 @@ public class EmployeeBAL : IEmployeeBAL
         }
     }
 
-    public async Task<int> UpdateEmployeeAsync(int id, EmployeeDto employee)
+    public async Task<int> UpdateEmployeeAsync(int id, UpdateEmployeeDto employee)
     {
         try
         {
@@ -143,6 +143,20 @@ public class EmployeeBAL : IEmployeeBAL
         catch (Exception ex)
         {
             _logger.Error($"Error occurred while retrieving employees by role: {ex.Message}");
+            throw;
+        }
+    }
+
+    public async Task<string?> UpdateEmployeeModeAsync(int? id, int? modeStatusId)
+    {
+        try
+        {
+            string? updatedModeStatusId = await _employeeDal.UpdateEmployeeModeAsync(id, modeStatusId);
+            return updatedModeStatusId;
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Error occured while updating mode status :  {ex.Message}");
             throw;
         }
     }

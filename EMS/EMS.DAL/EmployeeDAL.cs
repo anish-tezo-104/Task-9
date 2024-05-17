@@ -3,6 +3,7 @@ using EMS.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using EMS.DB.Mapper;
 using EMS.DAL.DTO;
+using EMS.DB.Models;
 
 namespace EMS.DAL;
 
@@ -34,6 +35,7 @@ public class EmployeeDAL : IEmployeeDAL
             .Include(e => e.Role)
             .Include(e => e.Department)
             .Include(e => e.Project)
+            .Include(e => e.Mode)
             .ToListAsync();
 
         return _mapper.ToEmployeeDto(employees);
@@ -46,6 +48,7 @@ public class EmployeeDAL : IEmployeeDAL
                        .Include(e => e.Role)
                        .Include(e => e.Department)
                        .Include(e => e.Project)
+                       .Include(e => e.Mode)
                        .FirstOrDefaultAsync(e => e.Id == id);
 
         if (employee == null)
@@ -56,7 +59,7 @@ public class EmployeeDAL : IEmployeeDAL
         return _mapper.ToEmployeeDto(employee);
     }
 
-    public async Task<int> UpdateAsync(int id, EmployeeDto employee)
+    public async Task<int> UpdateAsync(int id, UpdateEmployeeDto employee)
     {
         var existingEmployee = await _context.Employee.FindAsync(id);
         if (existingEmployee == null)
@@ -105,6 +108,7 @@ public class EmployeeDAL : IEmployeeDAL
             .Include(e => e.Role)
             .Include(e => e.Department)
             .Include(e => e.Project)
+            .Include(e => e.Mode)
             .AsQueryable();
 
 
@@ -164,6 +168,7 @@ public class EmployeeDAL : IEmployeeDAL
          .Include(e => e.Role)
          .Include(e => e.Department)
          .Include(e => e.Project)
+         .Include(e => e.Mode)
          .Where(e => e.RoleId == id)
          .ToListAsync();
 
@@ -182,6 +187,7 @@ public class EmployeeDAL : IEmployeeDAL
            .Include(e => e.Role)
            .Include(e => e.Department)
            .Include(e => e.Project)
+           .Include(e => e.Mode)
            .Where(e => e.DepartmentId == id)
            .ToListAsync();
 
@@ -191,5 +197,29 @@ public class EmployeeDAL : IEmployeeDAL
         }
 
         return _mapper.ToEmployeeDto(employees);
+    }
+
+    public async Task<string?> UpdateEmployeeModeAsync(int? Id, int? modeStatusId)
+    {
+        Employee? employee = await _context.Employee
+            .Include(e => e.Mode)
+            .FirstOrDefaultAsync(e => e.Id == Id);
+
+        if (employee == null)
+        {
+            return null;
+        }
+
+        // Update mode status
+        employee.ModeStatusId = modeStatusId;
+        _context.Employee.Update(employee);
+        await _context.SaveChangesAsync();
+
+        string? modeName = await _context.Employee
+            .Where(e => e.Id == Id)
+            .Select(e => e.Mode!.Name)
+            .SingleOrDefaultAsync();
+
+        return modeName;
     }
 }

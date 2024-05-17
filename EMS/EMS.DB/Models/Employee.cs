@@ -10,12 +10,13 @@ public class Employee
     [Column(TypeName = "int")]
     public int Id { get; set; }
 
-    [Required]
+    
     [MaxLength(10)]
     [Column(TypeName = "varchar(10)")]
     [Index(IsUnique = true)]
     public string? UID { get; set; }
 
+    
     [MaxLength(16)]
     [Column(TypeName = "varchar(16)")]
     public string Password { get; set; } = string.Empty;
@@ -50,6 +51,8 @@ public class Employee
     public bool IsManager { get; set; } = false;
     public int? ProjectId { get; set; }
 
+    public int? ModeStatusId { get; set; } = 1;
+
     // Navigation properties
     [ForeignKey("LocationId")]
     public Location? Location { get; set; }
@@ -65,6 +68,9 @@ public class Employee
 
     [ForeignKey("ManagerId")]
     public Employee? Manager { get; set; }
+
+    [ForeignKey("ModeStatusId")]
+    public Mode? Mode { get; set; }
 
     public override string ToString()
     {

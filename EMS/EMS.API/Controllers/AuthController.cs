@@ -56,7 +56,7 @@ public class AuthController : ControllerBase
                 Token = token
             };
 
-            return ResponseHelper.WrapResponse(200, "success", responseData);
+            return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), responseData);
         }
         catch (Exception)
         {
@@ -78,18 +78,33 @@ public class AuthController : ControllerBase
             }
 
             var token = GenerateJwtToken(result);
-
+            result.Password = null;
             var responseData = new
             {
                 Response = result,
                 Token = token
             };
 
-            return ResponseHelper.WrapResponse(200, "success", responseData);
+            return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), responseData);
         }
         catch (Exception)
         {
-            return ResponseHelper.WrapResponse(500, "error", null, ErrorCodes.FAILED_TO_REGISTER.ToString());
+            return ResponseHelper.WrapResponse(500, StatusMessage.FAILURE.ToString(), null, ErrorCodes.FAILED_TO_REGISTER.ToString());
+        }
+    }
+
+    [Authorize]
+    [HttpGet("Logout")]
+    public async Task<IActionResult> LogoutAsync([FromQuery] int EmployeeId)
+    {
+        try
+        {
+            await _authBal.LogoutAsync(EmployeeId);
+            return ResponseHelper.WrapResponse(200,StatusMessage.SUCCESS.ToString(), null);
+        }
+        catch(Exception)
+        {
+            return ResponseHelper.WrapResponse(500, StatusMessage.FAILURE.ToString(), null, ErrorCodes.FAILED_TO_LOGOUT.ToString());
         }
     }
 

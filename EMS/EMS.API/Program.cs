@@ -92,7 +92,6 @@ builder.Services.AddDbContext<EMSContext>(options =>
 
 });
 
-//builder.Services.AddDbContext<EMSContext>();
 
 // Add JWT authentication
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];

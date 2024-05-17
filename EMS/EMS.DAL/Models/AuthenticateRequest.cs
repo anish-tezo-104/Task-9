@@ -4,9 +4,9 @@ namespace EMS.DAL.Models;
 
 public class AuthenticateRequest
 {
-    [DefaultValue("System")]
+    [DefaultValue("anish@gmail.com")]
     public required string Email { get; set; }
 
-    [DefaultValue("System")]
+    [DefaultValue("12345678")]
     public required string Password { get; set; }
 }

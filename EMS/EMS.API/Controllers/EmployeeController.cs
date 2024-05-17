@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using EMS.DAL.Models;
+using EMS.DB.Models;
 
 namespace EMS.API.Controllers;
 
@@ -26,23 +27,30 @@ public class EmployeeController : ControllerBase
     }
 
     [HttpPost]
-    [Authorize]
-    public async Task<IActionResult> AddEmployee([FromBody] EmployeeDto employee)
+    public async Task<IActionResult> AddEmployee([FromBody] EmployeeDto employee )
     {
-        try
+        if (!ModelState.IsValid)
         {
-            var result = await _employeeBal.AddEmployeeAsync(employee);
-            return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), result);
+            return BadRequest(ModelState);
         }
-        catch (Exception)
+        else
         {
-            return ResponseHelper.WrapResponse(500, StatusMessage.FAILURE.ToString(), null, ErrorCodes.FAILED_TO_ADD_EMPLOYEE.ToString());
+            try
+            {
+                employee.Password = BCrypt.Net.BCrypt.HashPassword(employee.Password, 12);
+                var result = await _employeeBal.AddEmployeeAsync(employee);
+                return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), result);
+            }
+            catch (Exception)
+            {
+                return ResponseHelper.WrapResponse(500, StatusMessage.FAILURE.ToString(), null, ErrorCodes.FAILED_TO_ADD_EMPLOYEE.ToString());
+            }
         }
     }
 
     [HttpPut("{id}")]
     [Authorize]
-    public async Task<IActionResult> UpdateEmployee(int id, [FromBody] EmployeeDto employee)
+    public async Task<IActionResult> UpdateEmployee(int id, [FromBody] UpdateEmployeeDto employee)
     {
         try
         {
@@ -80,12 +88,27 @@ public class EmployeeController : ControllerBase
 
     [HttpGet]
     //[Authorize]
-    public async Task<IActionResult> GetEmployees([FromQuery] EmployeeFilters? filters)
+    public async Task<IActionResult> GetEmployees([FromQuery] EmployeeFilters? filters, [FromQuery] int? modeStatusId)
     {
         try
         {
+            
             if (filters != null)
             {
+                if (modeStatusId != null)
+                {
+                    if(filters.EmployeeId == null)
+                    {
+                        return ResponseHelper.WrapResponse(400, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEE_ID_IS_REQUIRED.ToString());
+                    }
+                    var currentEmployeeMode = await _employeeBal.UpdateEmployeeModeAsync(filters.EmployeeId, modeStatusId);
+                    if (currentEmployeeMode == null)
+                    {
+                        return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEE_NOT_FOUND.ToString());
+                    }
+                    string message = $"Employee is in '{currentEmployeeMode}' mode.";
+                    return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), message);
+                }
                 if (filters.RoleId != null)
                 {
                     var employeesByRole = await _employeeBal.GetEmployeeByRoleAsync(filters.RoleId);
@@ -113,6 +136,7 @@ public class EmployeeController : ControllerBase
                     }
                     return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), employee);
                 }
+                
 
                 var employees = await _employeeBal.FilterEmployeesAsync(filters);
                 if (employees == null || employees.Count == 0)

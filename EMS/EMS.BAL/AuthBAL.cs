@@ -40,6 +40,18 @@ public class AuthBAL : IAuthBAL
             _logger.Error($"Error occurred while inserting employee: {ex.Message}");
             throw;
         }
+    }
 
+    public async Task LogoutAsync(int Id)
+    {
+        try
+        {
+            await _authDal.LogoutAsync(Id);
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Error occurred while logging out: {ex.Message}");
+            throw;
+        }
     }
 }

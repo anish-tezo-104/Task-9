@@ -10,9 +10,10 @@ public interface IEmployeeBAL
     public Task<EmployeeDto> GetEmployeeByIdAsync(int? id);
     public Task<int> AddEmployeeAsync(EmployeeDto employee);
     public Task<int> DeleteEmployeeAsync(int id);
-    public Task<int> UpdateEmployeeAsync(int id, EmployeeDto employee);
+    public Task<int> UpdateEmployeeAsync(int id, UpdateEmployeeDto employee);
     public Task<List<EmployeeDto>?> FilterEmployeesAsync(EmployeeFilters? filters);
     public Task<int> CountEmployeesAsync();
     public  Task<List<EmployeeDto>?> GetEmployeeByDepartmentIdAsync(int? id);
     public Task<List<EmployeeDto>?> GetEmployeeByRoleAsync(int? id);
+    public Task<string?> UpdateEmployeeModeAsync(int? id, int? modeStatusId);
 }
