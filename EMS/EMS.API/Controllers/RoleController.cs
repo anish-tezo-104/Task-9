@@ -29,14 +29,21 @@ public class RoleController : ControllerBase
     [Authorize]
     public async Task<IActionResult> AddRoleAsync([FromBody] Role role)
     {
-        try
+        if (!ModelState.IsValid)
         {
-            var result = await _roleBal.AddRoleAsync(role);
-            return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), result);
+            return BadRequest(ModelState);
         }
-        catch (Exception)
+        else
         {
-            return ResponseHelper.WrapResponse(500, StatusMessage.FAILURE.ToString(), null, ErrorCodes.FAILED_TO_ADD_ROLE.ToString());
+            try
+            {
+                var result = await _roleBal.AddRoleAsync(role);
+                return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), result);
+            }
+            catch (Exception)
+            {
+                return ResponseHelper.WrapResponse(500, StatusMessage.FAILURE.ToString(), null, ErrorCodes.FAILED_TO_ADD_ROLE.ToString());
+            }
         }
     }
 

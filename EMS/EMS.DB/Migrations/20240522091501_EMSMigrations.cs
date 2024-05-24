@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace EMS.API.Migrations
+namespace EMS.DB.Migrations
 {
     /// <inheritdoc />
     public partial class EMSMigrations : Migration
@@ -35,6 +35,19 @@ namespace EMS.API.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Location", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Mode",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Mode", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -76,7 +89,7 @@ namespace EMS.API.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UID = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
+                    UID = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: true),
                     Password = table.Column<string>(type: "varchar(16)", maxLength: 16, nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false),
                     FirstName = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
@@ -90,7 +103,8 @@ namespace EMS.API.Migrations
                     DepartmentId = table.Column<int>(type: "int", nullable: true),
                     ManagerId = table.Column<int>(type: "int", nullable: true),
                     IsManager = table.Column<bool>(type: "bit", nullable: false),
-                    ProjectId = table.Column<int>(type: "int", nullable: true)
+                    ProjectId = table.Column<int>(type: "int", nullable: true),
+                    ModeStatusId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -109,6 +123,11 @@ namespace EMS.API.Migrations
                         name: "FK_Employee_Location_LocationId",
                         column: x => x.LocationId,
                         principalTable: "Location",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Employee_Mode_ModeStatusId",
+                        column: x => x.ModeStatusId,
+                        principalTable: "Mode",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Employee_Project_ProjectId",
@@ -138,6 +157,11 @@ namespace EMS.API.Migrations
                 column: "ManagerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Employee_ModeStatusId",
+                table: "Employee",
+                column: "ModeStatusId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Employee_ProjectId",
                 table: "Employee",
                 column: "ProjectId");
@@ -161,6 +185,9 @@ namespace EMS.API.Migrations
 
             migrationBuilder.DropTable(
                 name: "Location");
+
+            migrationBuilder.DropTable(
+                name: "Mode");
 
             migrationBuilder.DropTable(
                 name: "Project");

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace EMS.API.Migrations
+namespace EMS.DB.Migrations
 {
     [DbContext(typeof(EMSContext))]
     partial class EMSContextModelSnapshot : ModelSnapshot
@@ -82,6 +82,9 @@ namespace EMS.API.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");
 
+                    b.Property<int?>("ModeStatusId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(16)
@@ -97,7 +100,6 @@ namespace EMS.API.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UID")
-                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("varchar(10)");
 
@@ -108,6 +110,8 @@ namespace EMS.API.Migrations
                     b.HasIndex("LocationId");
 
                     b.HasIndex("ManagerId");
+
+                    b.HasIndex("ModeStatusId");
 
                     b.HasIndex("ProjectId");
 
@@ -132,6 +136,24 @@ namespace EMS.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Location");
+                });
+
+            modelBuilder.Entity("EMS.DB.Models.Mode", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Mode");
                 });
 
             modelBuilder.Entity("EMS.DB.Models.Project", b =>
@@ -190,6 +212,10 @@ namespace EMS.API.Migrations
                         .WithMany()
                         .HasForeignKey("ManagerId");
 
+                    b.HasOne("EMS.DB.Models.Mode", "Mode")
+                        .WithMany("Employee")
+                        .HasForeignKey("ModeStatusId");
+
                     b.HasOne("EMS.DB.Models.Project", "Project")
                         .WithMany("Employee")
                         .HasForeignKey("ProjectId");
@@ -203,6 +229,8 @@ namespace EMS.API.Migrations
                     b.Navigation("Location");
 
                     b.Navigation("Manager");
+
+                    b.Navigation("Mode");
 
                     b.Navigation("Project");
 
@@ -226,6 +254,11 @@ namespace EMS.API.Migrations
                 });
 
             modelBuilder.Entity("EMS.DB.Models.Location", b =>
+                {
+                    b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("EMS.DB.Models.Mode", b =>
                 {
                     b.Navigation("Employee");
                 });
