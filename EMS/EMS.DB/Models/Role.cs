@@ -16,9 +16,14 @@ public class Role
     [Required]
     public int? DepartmentId { get; set; }
 
+    public int? LocationId { get; set; }
+
     // Navigation properties
     [ForeignKey("DepartmentId")]
     public Department? Department { get; set; }
+
+    [ForeignKey("LocationId")]
+    public Location? Location { get; set; }
 
     public virtual ICollection<Employee> Employee { get; set; } = [];
 }

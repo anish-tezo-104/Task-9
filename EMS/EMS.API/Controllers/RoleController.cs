@@ -27,7 +27,7 @@ public class RoleController : ControllerBase
 
     [HttpPost]
     [Authorize]
-    public async Task<IActionResult> AddRoleAsync([FromBody] Role role)
+    public async Task<IActionResult> AddRoleAsync([FromBody] RoleDto role)
     {
         if (!ModelState.IsValid)
         {
@@ -73,6 +73,15 @@ public class RoleController : ControllerBase
                     }
                     return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), role);
                 }
+                else if(filters.LocationId != null)
+                {
+                    var role = await _roleBal.GetRolesByLocIdAsync(filters);
+                    if (role == null || role.Count == 0)
+                    {
+                        return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.ROLES_NOT_FOUND.ToString());
+                    }
+                    return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), role);
+                }
                 else
                 {
                     var roles = await _roleBal.FilterRolesAsync(filters);
@@ -85,7 +94,7 @@ public class RoleController : ControllerBase
             }
             else
             {
-                var roles = await _roleBal.FilterRolesAsync(filters);
+                var roles = await _roleBal.GetAllAsync(filters);
                 if (roles == null)
                 {
                     return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.ROLES_NOT_FOUND.ToString());

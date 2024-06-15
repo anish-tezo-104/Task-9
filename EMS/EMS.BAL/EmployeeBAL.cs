@@ -60,18 +60,19 @@ public class EmployeeBAL : IEmployeeBAL
 
     }
 
-    public async Task<int> DeleteEmployeeAsync(int id)
+    public async Task<int> DeleteEmployeeAsync(IEnumerable<int> ids)
     {
         try
         {
-            return await _employeeDal.DeleteAsync(id);
+            return await _employeeDal.DeleteAsync(ids);
         }
         catch (Exception ex)
         {
-            _logger.Error($"Error deleting employee: {ex.Message}");
+            _logger.Error($"Error deleting employees: {ex.Message}");
             throw;
         }
     }
+
 
     public async Task<int> UpdateEmployeeAsync(int id, UpdateEmployeeDto employee)
     {
@@ -157,6 +158,20 @@ public class EmployeeBAL : IEmployeeBAL
         catch (Exception ex)
         {
             _logger.Error($"Error occured while updating mode status :  {ex.Message}");
+            throw;
+        }
+    }
+
+    public async Task<List<DepartmentEmployeeDto>> GetEmployeesGroupedByDepartmentsAsync()
+    {
+        try
+        {
+            List<DepartmentEmployeeDto> employees = await _employeeDal.RetrieveGroupedByDepartmentsAsync() ?? new List<DepartmentEmployeeDto>();
+            return employees;
+        }
+        catch (Exception ex)
+        {
+            _logger.Error($"Error occurred while retrieving employees grouped by departments: {ex.Message}");
             throw;
         }
     }

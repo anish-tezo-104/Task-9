@@ -65,6 +65,19 @@ public class EMSContext : DbContext
         modelBuilder.Entity<Role>()
             .HasKey(r => r.Id);
 
+        modelBuilder.Entity<Role>()
+            .HasOne(r => r.Department)
+            .WithMany()
+            .HasForeignKey(r => r.DepartmentId)
+            .IsRequired(true);
+
+        modelBuilder.Entity<Role>()
+            .HasOne(r => r.Location)
+            .WithMany()
+            .HasForeignKey(r => r.LocationId)
+            .IsRequired(false);
+
+
         modelBuilder.Entity<Project>()
             .HasKey(p => p.Id);
 

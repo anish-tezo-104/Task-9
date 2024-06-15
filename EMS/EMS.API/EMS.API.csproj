@@ -20,11 +20,14 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Identity.Web" Version="2.16.0" />
     <PackageReference Include="Microsoft.Identity.Web.UI" Version="2.16.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="logs\" />
+    <Folder Include="StaticFiles\Images\" />
     <ProjectReference Include="..\EMS.BAL\EMS.BAL.csproj" />
   </ItemGroup>
 </Project>

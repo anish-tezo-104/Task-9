@@ -3,7 +3,6 @@ using EMS.DAL.Interfaces;
 using EMS.DAL.Mapper;
 using EMS.DAL.Models;
 using EMS.DB.Context;
-using EMS.DB.Mapper;
 using EMS.DB.Models;
 using Microsoft.EntityFrameworkCore;
 using Serilog;

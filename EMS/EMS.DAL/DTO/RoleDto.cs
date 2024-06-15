@@ -6,4 +6,7 @@ public class RoleDto
     public string? RoleName { get; set; }
     public int? DepartmentId { get; set; }
     public string? DepartmentName { get; set; }
+    public int? LocationId {get; set; }
+    public string? LocationName { get; set;}
+    public List<EmployeeDto> Employees { get; set; } = [];
 }

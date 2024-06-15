@@ -8,8 +8,9 @@ public interface IEmployeeBAL
 {
     public Task<List<EmployeeDto>?> GetAllAsync(EmployeeFilters? filters);
     public Task<EmployeeDto> GetEmployeeByIdAsync(int? id);
+    public Task<List<DepartmentEmployeeDto>> GetEmployeesGroupedByDepartmentsAsync();
     public Task<int> AddEmployeeAsync(EmployeeDto employee);
-    public Task<int> DeleteEmployeeAsync(int id);
+    public Task<int> DeleteEmployeeAsync(IEnumerable<int> ids);
     public Task<int> UpdateEmployeeAsync(int id, UpdateEmployeeDto employee);
     public Task<List<EmployeeDto>?> FilterEmployeesAsync(EmployeeFilters? filters);
     public Task<int> CountEmployeesAsync();
