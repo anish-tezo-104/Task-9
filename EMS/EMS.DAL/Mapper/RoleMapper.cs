@@ -37,7 +37,8 @@ public class RoleMapper : IRoleMapper
             DepartmentName = departmentName,
             LocationId = role.LocationId,
             LocationName = locationName,
-            Employees = employees
+            Description = role.Description,
+            EmployeesCount = employees.Count
         };
     }
 
@@ -47,7 +48,8 @@ public class RoleMapper : IRoleMapper
         {
             Name = RoleDto.RoleName!,
             DepartmentId = RoleDto.DepartmentId,
-            LocationId = RoleDto.LocationId
+            LocationId = RoleDto.LocationId,
+            Description = RoleDto.Description,
         };
     }
 }

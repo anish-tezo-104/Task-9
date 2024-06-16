@@ -24,6 +24,7 @@ public class Role
 
     [ForeignKey("LocationId")]
     public Location? Location { get; set; }
+    public string? Description { get; set; } = String.Empty;
 
     public virtual ICollection<Employee> Employee { get; set; } = [];
 }

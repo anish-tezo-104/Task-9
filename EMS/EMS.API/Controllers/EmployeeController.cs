@@ -6,6 +6,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using EMS.DAL.Models;
 using Newtonsoft.Json;
+using EMS.DB.Models;
 
 namespace EMS.API.Controllers;
 
@@ -17,10 +18,12 @@ public class EmployeeController : ControllerBase
     private readonly Serilog.ILogger _logger;
     private readonly string ImageUploadDirectory;
     private readonly string folderPath;
+    private readonly ProfileImagesHelper _profileImagesHelper;
 
-    public EmployeeController(Serilog.ILogger logger, IEmployeeBAL employeeBAL, IConfiguration configuration)
+    public EmployeeController(Serilog.ILogger logger, IEmployeeBAL employeeBAL, IConfiguration configuration, ProfileImagesHelper profileImagesHelper)
     {
         _logger = logger;
+        _profileImagesHelper = profileImagesHelper;
         _employeeBal = employeeBAL;
         folderPath = Path.Combine(configuration.GetValue<string>("AppSettings:ImageUploadDirectory") ?? "StaticFiles", "Images");
         ImageUploadDirectory = Path.Combine(Directory.GetCurrentDirectory(), folderPath);
@@ -55,19 +58,10 @@ public class EmployeeController : ControllerBase
             // Get the uploaded file
             var profileImage = form.Files.GetFile("profileImage");
 
-            if (profileImage != null && profileImage.Length > 0)
+
+            var relativePath = await _profileImagesHelper.HandleProfileImageUpload(profileImage, employee.Id);
+            if (relativePath != null)
             {
-                var uniqueFileName = $"{employee.Id}_ProfileImage{Path.GetExtension(profileImage.FileName)}";
-                var fullPath = Path.Combine(this.ImageUploadDirectory, uniqueFileName);
-
-                using (var stream = new FileStream(fullPath, FileMode.Create))
-                {
-                    await profileImage.CopyToAsync(stream);
-                }
-
-                var relativePath = Path.Combine(this.folderPath, uniqueFileName);
-
-                _logger.Information("File Path : " + relativePath);
                 employee.ProfileImagePath = relativePath;
             }
 
@@ -106,10 +100,6 @@ public class EmployeeController : ControllerBase
 
             if (profileImage != null && profileImage.Length > 0)
             {
-                // Construct the unique file name using employee UID
-                var uniqueFileName = $"{id}_ProfileImage{Path.GetExtension(profileImage.FileName)}";
-                var fullPath = Path.Combine(this.ImageUploadDirectory, uniqueFileName);
-
                 // Delete previous image if exists
                 var existingImagePath = Path.Combine(this.ImageUploadDirectory, employee.ProfileImagePath!);
                 if (System.IO.File.Exists(existingImagePath))
@@ -118,29 +108,20 @@ public class EmployeeController : ControllerBase
                     System.IO.File.Delete(existingImagePath);
                 }
 
-                using (var stream = new FileStream(fullPath, FileMode.Create))
-                {
-                    isModified = true;
-                    await profileImage.CopyToAsync(stream);
-                }
-
-
-                var relativePath = Path.Combine(this.folderPath, uniqueFileName);
-
-                _logger.Information("File Path : " + relativePath);
+                var relativePath = await _profileImagesHelper.HandleProfileImageUpload(profileImage, id);
                 employee.ProfileImagePath = relativePath;
             }
 
             var result = await _employeeBal.UpdateEmployeeAsync(id, employee);
 
-            if(isModified || result > 0)
+            if (isModified || result > 0)
             {
                 return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), result);
             }
-            
+
             return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEE_NOT_FOUND.ToString());
 
-            
+
         }
         catch (Exception)
         {
@@ -173,12 +154,12 @@ public class EmployeeController : ControllerBase
     {
         try
         {
-            
+
             if (filters != null)
             {
                 if (modeStatusId != null)
                 {
-                    if(filters.EmployeeId == null)
+                    if (filters.EmployeeId == null)
                     {
                         return ResponseHelper.WrapResponse(400, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEE_ID_IS_REQUIRED.ToString());
                     }
@@ -193,19 +174,21 @@ public class EmployeeController : ControllerBase
                 if (filters.RoleId != null)
                 {
                     var employeesByRole = await _employeeBal.GetEmployeeByRoleAsync(filters.RoleId);
-                    if (employeesByRole == null )
+                    if (employeesByRole == null)
                     {
                         return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEES_NOT_FOUND.ToString());
                     }
+                    await _profileImagesHelper.LoadProfileImages(employeesByRole);
                     return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), employeesByRole);
                 }
                 if (filters.DepartmentId != null)
                 {
                     var employeesByDept = await _employeeBal.GetEmployeeByDepartmentIdAsync(filters.DepartmentId);
-                    if (employeesByDept == null )
+                    if (employeesByDept == null)
                     {
                         return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEES_NOT_FOUND.ToString());
                     }
+                    await _profileImagesHelper.LoadProfileImages(employeesByDept);
                     return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), employeesByDept);
                 }
                 if (filters.EmployeeId != null)
@@ -215,15 +198,17 @@ public class EmployeeController : ControllerBase
                     {
                         return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEE_NOT_FOUND.ToString());
                     }
+                    await _profileImagesHelper.LoadProfileImages(employee);
                     return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), employee);
                 }
                 if (!string.IsNullOrWhiteSpace(filters.GroupBy) && filters.GroupBy.Equals("department", StringComparison.OrdinalIgnoreCase))
                 {
                     var groupedEmployees = await _employeeBal.GetEmployeesGroupedByDepartmentsAsync();
-                    if (groupedEmployees == null )
+                    if (groupedEmployees == null)
                     {
                         return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEES_NOT_FOUND.ToString());
                     }
+
                     return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), groupedEmployees);
                 }
 
@@ -233,6 +218,9 @@ public class EmployeeController : ControllerBase
                 {
                     return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.FAILED_TO_FILTER_EMPLOYEES.ToString());
                 }
+
+                await _profileImagesHelper.LoadProfileImages(employees);
+
                 return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), employees);
 
             }
@@ -243,6 +231,7 @@ public class EmployeeController : ControllerBase
                 {
                     return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEES_NOT_FOUND.ToString());
                 }
+                await _profileImagesHelper.LoadProfileImages(employees);
                 return ResponseHelper.WrapResponse(200, StatusMessage.SUCCESS.ToString(), employees);
             }
         }
@@ -284,4 +273,5 @@ public class EmployeeController : ControllerBase
         }
         return null;
     }
+
 }
