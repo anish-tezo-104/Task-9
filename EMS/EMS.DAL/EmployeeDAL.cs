@@ -3,6 +3,7 @@ using EMS.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using EMS.DAL.DTO;
 using EMS.DB.Models;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace EMS.DAL;
 
@@ -58,7 +59,7 @@ public class EmployeeDAL : IEmployeeDAL
         return _mapper.ToEmployeeDto(employee);
     }
 
-    public async Task<int> UpdateAsync(int id, UpdateEmployeeDto employee)
+    public async Task<int> UpdateAsync(int id, JsonPatchDocument<UpdateEmployeeDto> patchDoc)
     {
         var existingEmployee = await _context.Employee.FindAsync(id);
         if (existingEmployee == null)
@@ -66,18 +67,27 @@ public class EmployeeDAL : IEmployeeDAL
             return 0;
         }
 
-        existingEmployee.FirstName = !string.IsNullOrEmpty(employee.FirstName) ? employee.FirstName : existingEmployee.FirstName;
-        existingEmployee.LastName = !string.IsNullOrEmpty(employee.LastName) ? employee.LastName : existingEmployee.LastName;
-        existingEmployee.Dob = employee.Dob ?? existingEmployee.Dob;
-        existingEmployee.Email = !string.IsNullOrEmpty(employee.Email) ? employee.Email : existingEmployee.Email;
-        existingEmployee.MobileNumber = !string.IsNullOrEmpty(employee.MobileNumber) ? employee.MobileNumber : existingEmployee.MobileNumber;
-        existingEmployee.JoiningDate = employee.JoiningDate ?? existingEmployee.JoiningDate;
-        existingEmployee.LocationId = employee.LocationId ?? existingEmployee.LocationId;
-        existingEmployee.RoleId = employee.RoleId ?? existingEmployee.RoleId;
-        existingEmployee.DepartmentId = employee.DepartmentId ?? existingEmployee.DepartmentId;
-        existingEmployee.ManagerId = employee.ManagerId ?? existingEmployee.ManagerId;
-        existingEmployee.ProjectId = employee.ProjectId ?? existingEmployee.ProjectId;
-        existingEmployee.ProfileImagePath = employee.ProfileImagePath ?? existingEmployee.ProfileImagePath;
+        var employeeDto = new UpdateEmployeeDto
+        {
+            FirstName = existingEmployee.FirstName,
+            LastName = existingEmployee.LastName,
+            Dob = existingEmployee.Dob,
+            Email = existingEmployee.Email,
+            MobileNumber = existingEmployee.MobileNumber,
+            JoiningDate = existingEmployee.JoiningDate,
+            LocationId = existingEmployee.LocationId,
+            RoleId = existingEmployee.RoleId,
+            DepartmentId = existingEmployee.DepartmentId,
+            ManagerId = existingEmployee.ManagerId,
+            IsManager = existingEmployee.IsManager,
+            ProjectId = existingEmployee.ProjectId,
+            ModeStatusId = existingEmployee.ModeStatusId,
+            ProfileImagePath = existingEmployee.ProfileImagePath
+        };
+
+        patchDoc.ApplyTo(employeeDto);
+
+        _context.Entry(existingEmployee).CurrentValues.SetValues(employeeDto);
 
         int rowsAffected = await _context.SaveChangesAsync();
 
@@ -97,7 +107,6 @@ public class EmployeeDAL : IEmployeeDAL
         int rowsAffected = await _context.SaveChangesAsync();
         return rowsAffected;
     }
-
 
     public async Task<List<EmployeeDto>?> FilterAsync(EmployeeFilters? filters)
     {
@@ -241,16 +250,17 @@ public class EmployeeDAL : IEmployeeDAL
             .Include(e => e.Department)
             .ToListAsync();
 
-        // Group employees by department and calculate the count
+        // Group employees by department and handle null departments
         var groupedEmployees = employees
-            .GroupBy(e => e.Department)
-            .Select(g => new DepartmentEmployeeDto
-            {
-                DepartmentId = g.Key!.Id,
-                DepartmentName = g.Key.Name,
-                EmployeesCount = g.Count()
-            })
-            .ToList();
+     .Where(e => e.Department != null)  // Filter out null departments
+     .GroupBy(e => e.Department)
+     .Select(g => new DepartmentEmployeeDto
+     {
+         DepartmentId = g.Key!.Id,
+         DepartmentName = g.Key.Name,
+         EmployeesCount = g.Count()
+     })
+     .ToList();
 
         // Ensure all departments are included, even those with zero employees
         var result = departments.Select(d => new DepartmentEmployeeDto

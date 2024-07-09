@@ -4,6 +4,7 @@ using EMS.DAL.DTO;
 using EMS.DAL.Interfaces;
 using EMS.DB.Models;
 using Serilog;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace EMS.BAL;
 
@@ -74,11 +75,11 @@ public class EmployeeBAL : IEmployeeBAL
     }
 
 
-    public async Task<int> UpdateEmployeeAsync(int id, UpdateEmployeeDto employee)
+    public async Task<int> UpdateEmployeeAsync(int id, JsonPatchDocument<UpdateEmployeeDto> patchDoc)
     {
         try
         {
-            return await _employeeDal.UpdateAsync(id, employee);
+            return await _employeeDal.UpdateAsync(id, patchDoc);
         }
         catch (Exception ex)
         {

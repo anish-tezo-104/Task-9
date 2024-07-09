@@ -36,7 +36,7 @@ public class EmployeeMapper : IEmployeeMapper
             IsManager = employee.IsManager,
             ManagerName = employee.Manager != null ? $"{employee.Manager.FirstName} {employee.Manager.LastName}" : null,
             ModeStatusId = employee.ModeStatusId,
-            ModeStatusName = employee.Mode!.Name,
+            ModeStatusName = employee.Mode?.Name,
             ProfileImagePath = employee.ProfileImagePath,
         };
     }

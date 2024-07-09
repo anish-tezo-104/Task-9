@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using EMS.DAL.Models;
 using Newtonsoft.Json;
 using EMS.DB.Models;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace EMS.API.Controllers;
 
@@ -74,45 +75,51 @@ public class EmployeeController : ControllerBase
         }
     }
 
-    [HttpPut("{id}"), DisableRequestSizeLimit]
-    [Authorize]
+    [HttpPatch("{id}"), DisableRequestSizeLimit]
     public async Task<IActionResult> UpdateEmployee(int id)
     {
         try
         {
             var form = await Request.ReadFormAsync();
-            var employeeJson = form["employeeData"];
-            bool isModified = true;
+            var employeePatchDocument = form["patchEmployee"];
+            bool isModified = false;
 
-            if (string.IsNullOrEmpty(employeeJson))
+            if (string.IsNullOrEmpty(employeePatchDocument))
             {
                 return BadRequest("Employee data is missing.");
             }
 
-            var employee = JsonConvert.DeserializeObject<UpdateEmployeeDto>(employeeJson!);
+            var patchDoc = JsonConvert.DeserializeObject<JsonPatchDocument<UpdateEmployeeDto>>(employeePatchDocument);
 
-            if (employee == null || !ModelState.IsValid)
+            if (patchDoc == null)
             {
-                return BadRequest(ModelState);
+                return BadRequest("Invalid patch document.");
             }
 
             var profileImage = form.Files.GetFile("profileImage");
 
             if (profileImage != null && profileImage.Length > 0)
             {
+                isModified = true;
+
+                var existingEmployee = await _employeeBal.GetEmployeeByIdAsync(id);
+                if (existingEmployee == null)
+                {
+                    return NotFound("Employee not found.");
+                }
+
                 // Delete previous image if exists
-                var existingImagePath = Path.Combine(this.ImageUploadDirectory, employee.ProfileImagePath!);
+                var existingImagePath = Path.Combine(this.ImageUploadDirectory, existingEmployee.ProfileImagePath);
                 if (System.IO.File.Exists(existingImagePath))
                 {
-                    isModified = true;
                     System.IO.File.Delete(existingImagePath);
                 }
 
                 var relativePath = await _profileImagesHelper.HandleProfileImageUpload(profileImage, id);
-                employee.ProfileImagePath = relativePath;
+                patchDoc.Replace(e => e.ProfileImagePath, relativePath);
             }
 
-            var result = await _employeeBal.UpdateEmployeeAsync(id, employee);
+            var result = await _employeeBal.UpdateEmployeeAsync(id, patchDoc);
 
             if (isModified || result > 0)
             {
@@ -120,8 +127,6 @@ public class EmployeeController : ControllerBase
             }
 
             return ResponseHelper.WrapResponse(404, StatusMessage.ERROR.ToString(), null, ErrorCodes.EMPLOYEE_NOT_FOUND.ToString());
-
-
         }
         catch (Exception)
         {
