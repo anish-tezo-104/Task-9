@@ -74,7 +74,6 @@ public class EmployeeBAL : IEmployeeBAL
         }
     }
 
-
     public async Task<int> UpdateEmployeeAsync(int id, JsonPatchDocument<UpdateEmployeeDto> patchDoc)
     {
         try
